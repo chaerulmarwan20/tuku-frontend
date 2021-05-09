@@ -1,0 +1,185 @@
+.box-head-add {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
+  border-radius: 4px;
+  padding: 1.5em;
+  margin: 1em 0;
+}
+.box-head-add > h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+}
+.box-head-add > p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #222222;
+}
+.box-head-add > button {
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: none;
+  outline: none;
+  height: 42px;
+  width: 230px;
+  color: #9b9b9b;
+}
+
+.modal .modal-dialog .modal-content .modal-header,
+.modal .modal-dialog .modal-content .modal-footer {
+  border: transparent;
+}
+
+.modal .modal-dialog .modal-content .modal-body .modal-title {
+  font-family: Metropolis;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
+  color: #222222;
+}
+
+.modal .modal-dialog .modal-content .modal-body form label {
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+.modal .modal-dialog .modal-content .modal-body form input.form-control {
+  height: 48px;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+  border-radius: 4px;
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+.modal .modal-dialog .modal-content .modal-body form input.form-control.error {
+  border: 1px solid #db3022;
+}
+
+.modal .modal-dialog .modal-content .modal-body form small.text-error {
+  font-family: Metropolis;
+  font-weight: 400;
+  color: #db3022;
+}
+
+.modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  form
+  input.form-control::placeholder {
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-cancel {
+  width: 160px;
+  height: 36px;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  border-radius: 24px;
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-save {
+  width: 160px;
+  height: 36px;
+  background: #273ac7;
+  border-radius: 25px;
+  font-family: Metropolis;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.modal .modal-dialog .modal-content .modal-body .new-address {
+  height: 86px;
+  border: 1px dashed #9b9b9b;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .new-address span {
+  font-family: Metropolis;
+  font-weight: 600;
+  font-size: 18px;
+  color: #9b9b9b;
+  transition: 0.5 ease;
+  cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .new-address span:hover {
+  opacity: 0.6;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address {
+  background: #ffffff;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address.active {
+  border: 1px solid #273ac7;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address h3 {
+  font-family: Metropolis;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address p {
+  font-family: Metropolis;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #222222;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address div {
+  font-family: Metropolis;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #273ac7;
+}
+
+.modal .modal-dialog .modal-content .modal-body .current-address div.choose {
+  cursor: pointer;
+  transition: 0.5 ease;
+}
+
+.modal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  .current-address
+  div.choose:hover {
+  opacity: 0.6;
+}
+
+.modal .modal-dialog .modal-content .modal-body.choose {
+  padding-bottom: 200px;
+}

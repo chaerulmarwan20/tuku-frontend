@@ -1,0 +1,81 @@
+.searchBorder { background: white; }
+
+/* DESKTOP */
+@media(min-width: 768px) {
+   /* NAVBAR */
+   .leftNav { justify-content: space-between; width: 50vw; }
+   .logo { height: 3.3vw; width: 7.7vw; }
+   .inputSearch:focus { outline: none; }
+   .filterBtn { margin-left: 1vw; height: 3vw; width: 3vw; }
+   .rightNav { justify-content: space-between; width: 22vw; }
+   .cartLogo, .bellLogo { height: 1.5vw; width: 1.5vw; }
+   .cartLogo { margin-right: 2.5vw; }
+   .loginBtn, .regBtn { border-radius: 1.5vw; font-size: 1vw; padding: 0.77vw; width: 8vw; }
+   .regBtn { border: 0.1vw solid #9B9B9B; }
+   .rightBtnZone { justify-content: space-between; width: 10vw; }
+   .notification { height: 1.5vw; width: 1.5vw; }
+   .mail { height: 1.5vw; width: 1.5vw; }
+   .dropdownUser {
+      border-radius: 1vw !important;
+      left: 50% !important;
+      right: auto !important;
+      text-align: center !important;
+      transform: translate(-15vw, 4vw) !important;
+   }
+   .notificationList {
+      padding: 1vw;
+      right: auto !important;
+      text-align: center !important;
+      transform: translate(-47.7%, 2vw) !important;
+      transition-duration: 0.5s;
+      width: 15vw;
+   }
+   .noNotificationPicture {
+      height: 8.8vw;
+      margin: 3.3vw 0;
+      width: 8.8vw;
+   }
+   /* PROFILE DROPDOWN */
+   .userDropdownWrapper {padding: 1vw 3vw; width: 20vw;}
+   .profileBtn { border-radius: 50%; height: 3vw; width: 3vw; }
+   .profileImage { border-radius: 50%; height: 5vw; width: 5vw; }
+   .userProfileNameAndPhone { padding: 1vw; padding-right: 0; text-align: left; width: 66%; }
+   .userProfileName, .userProfilePhone { float: left; margin: 0; }
+   .userProfileName { font-size: 1vw; font-weight: 600; }
+   .userProfilePhone {color: #6E7191; font-size: 0.8vw;}
+   .userBtnArea {align-items: center; justify-content: space-between; margin-top: 1vw;}
+   .settingsBtn, .logoutBtn { border-radius: 1vw; font-size: 1vw; padding: 0.5vw 1.5vw; }
+   .settingsBtn { background: #273AC7; color: white; }
+   .logoutBtn { background: indianred; color: white; }
+   /* SEARCH */
+   .searchBorder { border: 0.13vw solid #8E8E93; border-radius: 1.5vw; margin-left: -30vw; position: absolute; width: 30vw; }
+   .searchInputArea { padding: 0.5vw 1vw; }
+   .searchLogo { height: 1.3vw; width: 1.3vw; }
+   .inputSearch { border: none; font-size: 1vw; width: 100%; }
+   .searchResult { border-top: 0.1vw solid black; padding: 1vw; }
+   .productImage { border-radius: 0.5vw; height: 3.3vw; margin-right: 1vw; width: 3.3vw; }
+   .productTitle { font-size: 1vw; font-weight: bold; }
+   .productCategory { color: #9B9B9B; font-size: 0.8vw; }
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+   .logo { width: 30vw; }
+   .rightNav, .searchBorder, .filterBtn { display: none; }
+   .searchMobile { border: 2px solid #9B9B9B; border-radius: 24px; justify-content: space-between; padding: 3vw; width: 100%; }
+   .searchMobileInput { border: none; font-size: 5vw; width: 50%; }
+   .searchMobileInput:focus { outline: none; }
+   .authBtnMobileLogin { border-radius: 12px; font-size: 5vw; padding: 3vw; width: 30vw; }
+   .authBtnMobileRegister { border: 1px solid #9B9B9B; border-radius: 12px; font-size: 5vw; padding: 3vw; width: 30vw; }
+   /* PROFILE */
+   .userDropdownWrapper { padding: 3vw; }
+   .profileImage { border-radius: 50%; height: 20vw; width: 20vw; }
+   .userProfileNameAndPhone { padding: 1vw; margin-left: 2.5vw; text-align: left; }
+   .userProfileName, .userProfilePhone { float: left; margin: 0; padding: 1vw 2.5vw; width: 50vw; }
+   .userProfileName { font-size: 5vw; font-weight: 600; }
+   .userProfilePhone {color: #6E7191; font-size: 4vw;}
+   .userBtnArea {align-items: center; justify-content: space-between; margin-top: 5vw; width: 100%; }
+   .settingsBtn, .logoutBtn { border-radius: 3.3vw; font-size: 3.3vw; padding: 3.3vw 10vw; }
+   .settingsBtn { background: #273AC7; color: white; }
+   .logoutBtn { background: indianred; color: white; }
+}

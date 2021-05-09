@@ -1,0 +1,24 @@
+.sidebarButtonText { color: #9B9B9B; }
+.sidebarButtonText { transition-duration: 0.11s; }
+/* DESKTOP */
+@media(min-width: 768px) {
+   .sidebarUser, .sidebarStore { margin-top: 3.3vw; }
+   .sidebarUserButton, .sidebarStoreButton { margin: 0.5vw 0; }
+   .sidebarButtonLogo { height: 2.5vw; margin-right: 1vw; width: 2.5vw; }
+   .sidebarButtonText { font-size: 1vw; }
+   .sidebarStoreMenu { margin-left: 3.5vw; }
+   .sidebarStoreMenuButton { color: #A9A9A9; font-size: 0.88vw; margin: 0.5vw 0; }
+   .sidebarStoreMenuArrowButton { width: 0.55vw; }
+   .sidebarStoreMenuButton:hover { cursor: pointer; opacity: 0.5; }
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+   .sidebarUser, .sidebarStore { border-top: 0.33vw solid #E5E5E5; }
+   .sidebarUserButton, .sidebarStoreButton { border-bottom: 0.33vw solid #E5E5E5; padding: 5vw; }
+   .sidebarButtonLogo { height: 12.5vw; margin-right: 5vw; width: 12.5vw; }
+   .sidebarButtonText { font-size: 5vw; }
+   .sidebarStoreMenu { border-bottom: 0.33vw solid #E5E5E5; padding: 3vw 0; text-align: center; }
+   .sidebarStoreMenuButton { color: #A9A9A9; font-size: 3.8vw; margin: 2.2vw 0; }
+   .sidebarStoreMenuArrowButton { width: 3.3vw; }
+}

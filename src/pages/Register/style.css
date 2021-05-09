@@ -1,0 +1,125 @@
+section.register {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+section.register h1.heading-register {
+  font-family: "Metropolis Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #222222;
+}
+
+section.register .btn-customer,
+section.register .btn-seller {
+  width: 123px;
+  height: 48px;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+  font-family: "Metropolis Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+section.register .btn-customer.active,
+section.register .btn-seller.active {
+  background-color: #273ac7;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+section.register form input.form-control {
+  width: 400px;
+  height: 48px;
+  border: 1px solid #9b9b9b;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
+  border-radius: 4px;
+  font-family: "Metropolis Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+  padding-left: 20px;
+}
+
+section.register form input.form-control.error {
+  border: 1px solid #db3022;
+}
+
+section.register form small.text-error {
+  font-family: "Metropolis Regular";
+  font-weight: 400;
+  color: #db3022;
+}
+
+section.register form input.form-control::-webkit-input-placeholder {
+  font-family: "Metropolis Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9b9b9b;
+}
+
+section.register form input.form-control::-moz-placeholder {
+  font-family: "Metropolis Medium";
+  font-weight: 500;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+section.register form .btn-submit {
+  width: 401px;
+  height: 48px;
+  background-color: #273ac7;
+  border-radius: 25px;
+  font-family: "Metropolis Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+section.register p {
+  font-family: "Metropolis Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #222222;
+}
+
+section.register p a {
+  color: #273ac7;
+  text-decoration: none;
+  transition: 0.5 ease;
+}
+
+section.register p a:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 991px) {
+  section.register form input.form-control,
+  section.register form .btn-submit {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.register form input.form-control,
+  section.register form .btn-submit {
+    width: 310px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.register form input.form-control,
+  section.register form .btn-submit {
+    width: 280px;
+  }
+}

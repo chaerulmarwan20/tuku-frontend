@@ -1,0 +1,114 @@
+.homeCorouselOne,
+.homeCarouselTwoCategory {
+  padding: 4vw 8vw;
+}
+.homeCorouselOne {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.homeCarouselOneText {
+  position: absolute;
+  text-align: center;
+  margin-top: 4em;
+  margin-left: 4em;
+}
+.homeCarouselOneText p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 38px;
+  color: #ffffff;
+}
+.homeCarouselOneImg img {
+  width: 420px;
+}
+.homeCarouselTwoCategory {
+  background: #f0f1f9;
+  margin: auto;
+}
+.homeCarouselTwoTitle {
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 34px;
+  color: #222222;
+  margin-left: 3vw;
+  display: flex-start;
+  flex-direction: column;
+}
+.hctTitle p {
+  margin-bottom: 2px;
+}
+.homeCarouselTwoTitle span {
+  font-size: 12px;
+  line-height: 12px;
+  color: #9b9b9b;
+}
+.CarouselTwoCategoryItem {
+  margin-top: 16px;
+}
+.CarouselTwoCategoryText {
+  position: absolute;
+  margin-top: 3.3em;
+  margin-left: 1.9em;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 0px;
+  color: #ffffff;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .homeCorouselOne,
+  .homeCarouselTwoCategory {
+    padding: 48px 24px;
+  }
+  .homeCarouselOneText {
+    position: absolute;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 7em;
+  }
+  .homeCarouselOneText p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 38px;
+    color: #ffffff;
+  }
+  .homeCarouselOneImg img {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .homeCorouselOne {
+    width: 100%;
+  }
+  .homeCarouselOneText {
+    position: absolute;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 9em;
+  }
+  .homeCarouselOneText p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 28px;
+    color: #ffffff;
+  }
+  .homeCarouselTwoTitle span {
+    font-size: 12px;
+    line-height: 12px;
+    color: #9b9b9b;
+  }
+  .homeCarouselTwoCategory {
+    width: 100%;
+  }
+}

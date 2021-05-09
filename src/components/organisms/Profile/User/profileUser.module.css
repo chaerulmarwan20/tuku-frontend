@@ -1,0 +1,599 @@
+.rightSideUserProfile {
+  background: white;
+}
+.rightSideUserTitleBigText {
+  font-weight: bold;
+}
+.rightSideUserTitleSmallText {
+  color: #9b9b9b;
+}
+.myOrderBtn {
+  background: white;
+}
+.myProfileArea {
+  display: flex;
+  flex-direction: row;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .rightSideUserProfile {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 0.5vw;
+    padding: 1.5vw;
+    width: 57vw;
+  }
+  .btnDetail {
+    background-color: #273ac7;
+    border-radius: 25px;
+    font-family: Metropolis;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+  }
+  .rightSideUserTitle {
+    border-bottom: 0.1vw solid #d4d4d4;
+  }
+  .rightSideUserTitleBigText {
+    font-size: 1.5vw;
+  }
+  .rightSideUserTitleSmallText {
+    font-size: 1vw;
+    margin: 1vw 0;
+  }
+  /* MY ORDER - USER */
+  .myOrderBtnRowMobile {
+    display: none;
+  }
+  .myOrderBtn {
+    border-bottom: 0.22vw solid white;
+    color: #9b9b9b;
+    font-size: 1vw;
+    margin-right: 3vw;
+    margin-top: 1vw;
+    padding: 0.5vw 0;
+    transition-duration: 0.1s;
+  }
+  .selectedMyOrderBtn {
+    border-bottom: 0.22vw solid #273ac7;
+    color: #273ac7;
+    font-weight: bold;
+  }
+  .rightSideMyOrderDataShow {
+    padding: 2.5vw 0;
+  }
+  .noOrderImg {
+    margin: auto;
+    padding: 3.8vw 0;
+    width: 25%;
+  }
+  /* SHIPPING ADDRESS */
+  .insideAddressArea {
+    padding: 0 3vw;
+  }
+  .addNewAddressBtn {
+    border: 0.15vw dashed #9b9b9b;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+    margin: 2vw 0;
+    padding: 2vw;
+    transition-duration: 0.3s;
+    width: 100%;
+  }
+  .changeAddressArea {
+    border: 0.15vw solid #9b9b9b;
+    border-radius: 0.5vw;
+    margin-bottom: 1.5vw;
+    padding: 1.5vw;
+  }
+  .changeAddressAreaActive {
+    border: 0.15vw solid #273ac7;
+    border-radius: 0.5vw;
+    margin-bottom: 1.5vw;
+    padding: 1.5vw;
+  }
+  .changeAddressPeopleName,
+  .changeAddressBtn {
+    font-size: 1vw;
+    font-weight: bold;
+  }
+  .changeAddressLocation {
+    font-size: 0.9vw;
+    margin: 1vw 0;
+  }
+  .changeAddressBtn {
+    color: #273ac7;
+  }
+  /* ADD NEW ADDRESS */
+  .addNewAddress {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+  .transparentBackground {
+    background: black;
+    height: 100vh;
+    opacity: 0.5;
+    position: relative;
+    width: 100vw;
+  }
+  .insideAddNewAddress {
+    background: white;
+    border-radius: 1vw;
+    position: absolute;
+    text-align: center;
+    width: 50vw;
+  }
+  .closeBtn {
+    float: right;
+    margin: 1vw;
+    width: 3vw;
+  }
+  .addNewAddressText {
+    font-size: 1.77vw;
+    font-weight: bold;
+  }
+  .addNewAddressButtonArea {
+    float: right;
+    padding: 1.5vw 3vw;
+  }
+  .addressCancelButton,
+  .addressSaveButton {
+    border-radius: 1.5vw;
+    font-size: 1vw;
+  }
+  .addressCancelButton {
+    border: 0.1vw solid #9b9b9b;
+    margin-right: 1.5vw;
+    padding: 0.4vw 4vw;
+  }
+  .addressSaveButton {
+    padding: 0.5vw 4vw;
+  }
+  .insideAddNewAddressForm {
+    height: 85%;
+    justify-content: space-between;
+  }
+  .newAddressInputForm {
+    padding: 3vw;
+    text-align: left;
+  }
+  .inputLabel {
+    color: #9b9b9b;
+    font-size: 0.8vw;
+    margin-bottom: 0.5vw;
+  }
+  .newInputAddress {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    padding: 0.75vw 1vw;
+  }
+  .gapBetweenInputRow {
+    margin-top: 1vw;
+    width: 48%;
+  }
+  .inputCheckbox {
+    height: 1.5vw;
+    margin-right: 1vw;
+    margin-top: 1vw;
+    width: 1.5vw;
+  }
+  .makeItThePrimaryAddress {
+    color: #9b9b9b;
+    font-size: 1vw;
+    margin-top: 1vw;
+  }
+  /* MY PROFILE - USER */
+  .myProfileArea {
+    display: flex;
+    flex-direction: row;
+    padding: 2vw 0;
+  }
+  .myProfileLeftSide {
+    padding-right: 3vw;
+    width: 70%;
+  }
+  .myProfileLeftSideSetupSpace {
+    margin-bottom: 1.5vw;
+    margin-left: 2.5vw;
+    padding: 0.77vw 0;
+  }
+  .myProfileLeftSideLabel {
+    text-align: right;
+    width: 100%;
+  }
+  .myProfileInputLabel {
+    color: #9b9b9b;
+    font-size: 0.8vw;
+    margin-bottom: 1.54vw;
+    padding: 1vw 0;
+  }
+  .myProfileInput {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    padding: 0.77vw 1vw;
+    width: 25vw;
+  }
+  .myProfileRadioButton {
+    border: 0.1vw solid black;
+    border-radius: 50%;
+    padding: 0.1vw;
+  }
+  .myProfileInsideRadioButton {
+    background: white;
+    border-radius: 50%;
+    height: 0.8vw;
+    transition-duration: 0.3s;
+    width: 0.8vw;
+  }
+  .myProfileGender {
+    font-size: 1vw;
+    margin-left: 0.7vw;
+    margin-right: 2.2vw;
+  }
+  .myProfileRightSide {
+    align-items: center;
+    border-left: 0.1vw solid #d4d4d4;
+    width: 30%;
+  }
+  .myProfilePic {
+    border-radius: 50%;
+    height: 7.7vw;
+    margin-bottom: 1.5vw;
+    width: 7.7vw;
+  }
+  .myProfileSelectImage {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 1.5vw;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    padding: 0.5vw 1.5vw;
+    transition-duration: 0.3s;
+    width: 10vw;
+  }
+  .dateOfBirthZone {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.8vw;
+  }
+  .birthdateDropdownDate,
+  .birthdateDropdownMonth,
+  .birthdateDropdownYear {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 0.33vw;
+    margin-right: 1vw;
+  }
+  .birthdateDropdownDateSize,
+  .birthdateDropdownSelectDate {
+    width: 5.5vw;
+  }
+  .birthdateDropdownMonthSize,
+  .birthdateDropdownSelectMonth {
+    width: 10vw;
+  }
+  .birthdateDropdownYearSize,
+  .birthdateDropdownSelectYear {
+    width: 5.5vw;
+  }
+  .birthdateDropdownData {
+    justify-content: space-between;
+    height: 3vw;
+    padding: 0.5vw;
+  }
+  .birthdateDropdownSelectDate,
+  .birthdateDropdownSelectMonth,
+  .birthdateDropdownSelectYear {
+    border-bottom: 0.1vw solid #9b9b9b;
+    justify-content: space-between;
+    margin-top: 3vw;
+    padding: 0.5vw;
+    position: absolute;
+  }
+  .dropdownDataFont {
+    font-size: 1vw;
+  }
+  .dropdownDataArrow {
+    height: 0.5vw;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .rightSideUserProfile {
+    border: 0.33vw solid #9b9b9b;
+    border-radius: 2vw;
+    padding: 3vw;
+  }
+  .btnDetail {
+    background-color: #273ac7;
+    border-radius: 25px;
+    font-family: Metropolis;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+  }
+  .rightSideUserTitle {
+    border-bottom: 0.33vw solid #d4d4d4;
+    text-align: center;
+  }
+  .rightSideUserTitleBigText {
+    font-size: 4.4vw;
+  }
+  .rightSideUserTitleSmallText {
+    margin-bottom: 3vw;
+  }
+  /* MY ORDER - USER */
+  .myOrderBtnRowDesktop,
+  .hideInMobile {
+    display: none;
+  }
+  .myOrderBtnRowMobile {
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    width: 88%;
+  }
+  .arrowCarousel {
+    height: 3vw;
+  }
+  .selectedMyOrderBtn {
+    color: #273ac7;
+    font-size: 3.8vw;
+    font-weight: bold;
+  }
+  .rightSideMyOrderDataShow {
+    padding: 7.5vw 0;
+  }
+  .noOrderImg {
+    margin: auto;
+    padding: 10vw 0;
+  }
+  /* SHIPPING ADDRESS */
+  .insideAddressArea {
+    padding: 0 3vw;
+  }
+  .addNewAddressBtn {
+    border: 0.33vw dashed #9b9b9b;
+    border-radius: 2.5vw;
+    font-size: 5vw;
+    margin: 5vw 0;
+    padding: 2vw;
+    transition-duration: 0.3s;
+    width: 100%;
+  }
+  .changeAddressArea {
+    border: 0.15vw solid #9b9b9b;
+    border-radius: 2.5vw;
+    margin-bottom: 5vw;
+    padding: 5vw;
+  }
+  .changeAddressAreaActive {
+    border: 0.15vw solid #273ac7;
+    border-radius: 2.5vw;
+    margin-bottom: 5vw;
+    padding: 5vw;
+  }
+  .changeAddressPeopleName,
+  .changeAddressBtn {
+    font-size: 4.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  .changeAddressLocation {
+    font-size: 4vw;
+    margin: 5vw 0;
+    text-align: center;
+  }
+  .changeAddressBtn {
+    color: #273ac7;
+  }
+  /* ADD NEW ADDRESS */
+  .addNewAddress {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+  .transparentBackground {
+    background: black;
+    height: 100vh;
+    opacity: 0.5;
+    position: relative;
+    width: 100vw;
+  }
+  .insideAddNewAddress {
+    background: white;
+    border-radius: 3vw;
+    position: absolute;
+    width: 88vw;
+  }
+  .closeBtn {
+    float: right;
+    margin: 5vw;
+    width: 10vw;
+  }
+  .addNewAddressText {
+    font-size: 7.7vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  .addNewAddressButtonArea {
+    justify-content: space-between;
+    padding: 7.5vw 2.5vw;
+  }
+  .addressCancelButton,
+  .addressSaveButton {
+    border-radius: 7.5vw;
+    font-size: 5vw;
+    width: 33vw;
+  }
+  .addressCancelButton {
+    border: 0.1vw solid #9b9b9b;
+    margin-right: 1.5vw;
+    padding: 2vw 10vw;
+  }
+  .addressSaveButton {
+    padding: 2.5vw 10vw;
+  }
+  .insideAddNewAddressForm {
+    height: 85%;
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+  .newAddressInputForm {
+    padding: 3vw;
+    text-align: left;
+  }
+  .inputLabel {
+    color: #9b9b9b;
+    font-size: 3.8vw;
+    margin-bottom: 0.5vw;
+  }
+  .newInputAddress {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 1vw;
+    font-size: 3.8vw;
+    padding: 1.5vw 3vw;
+  }
+  .gapBetweenInputRow {
+    margin-top: 3.3vw;
+    width: 48%;
+  }
+  .inputCheckbox {
+    height: 5vw;
+    margin-right: 3vw;
+    margin-top: 5vw;
+    width: 5vw;
+  }
+  .makeItThePrimaryAddress {
+    color: #9b9b9b;
+    font-size: 3.8vw;
+    margin-top: 5vw;
+  }
+  /* MY PROFILE - USER */
+  .myProfileLeftSideInputArea {
+    margin: auto;
+  }
+  .myProfileInputLabel {
+    display: none;
+  }
+  .myProfileLeftSideSetupSpace {
+    justify-content: space-evenly;
+  }
+  .myProfileArea {
+    display: flex;
+    flex-direction: column;
+    padding: 10vw 0;
+  }
+  .myProfileLeftSide {
+    margin: auto;
+    width: 100%;
+  }
+  .myProfileInput {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 2vw;
+    font-size: 4vw;
+    margin-bottom: 5.5vw;
+    padding: 3vw;
+    width: 77vw;
+  }
+  .myProfileRadioButton {
+    border: 0.1vw solid black;
+    border-radius: 50%;
+    padding: 0.5vw;
+  }
+  .myProfileInsideRadioButton {
+    background: white;
+    border-radius: 50%;
+    height: 5vw;
+    transition-duration: 0.3s;
+    width: 5vw;
+  }
+  .myProfileGender {
+    font-size: 4vw;
+    margin-left: 3.3vw;
+  }
+  .tes {
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  .myProfileRightSide {
+    align-items: center;
+    margin: 0 1vw;
+  }
+  .myProfilePic {
+    border-radius: 50%;
+    height: 33vw;
+    margin: 15vw 0 7.7vw 0;
+    width: 33vw;
+  }
+  .myProfileSelectImage {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 7.5vw;
+    font-size: 5vw;
+    margin-top: 3.3vw;
+    padding: 2.5vw 7.5vw;
+    transition-duration: 0.3s;
+    width: 77vw;
+  }
+  .dateOfBirthZone {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 8.8vw;
+  }
+  .birthdateDropdownDate,
+  .birthdateDropdownMonth,
+  .birthdateDropdownYear {
+    border: 0.1vw solid #9b9b9b;
+    border-radius: 0.33vw;
+    margin: 0 1vw;
+  }
+  .birthdateDropdownDateSize,
+  .birthdateDropdownSelectDate {
+    width: 20vw;
+  }
+  .birthdateDropdownMonthSize,
+  .birthdateDropdownSelectMonth {
+    width: 30vw;
+  }
+  .birthdateDropdownYearSize,
+  .birthdateDropdownSelectYear {
+    width: 20vw;
+  }
+  .birthdateDropdownData {
+    justify-content: space-between;
+    height: 3vw;
+    padding: 5vw;
+  }
+  .birthdateDropdownSelectDate,
+  .birthdateDropdownSelectMonth,
+  .birthdateDropdownSelectYear {
+    border-bottom: 0.1vw solid #9b9b9b;
+    justify-content: space-between;
+    margin-top: 11vw;
+    padding: 0.5vw;
+    position: absolute;
+  }
+  .dropdownDataFont {
+    font-size: 3.8vw;
+  }
+  .dropdownDataArrow {
+    height: 3.3vw;
+  }
+}

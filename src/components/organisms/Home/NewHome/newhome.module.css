@@ -1,0 +1,135 @@
+p.title {
+  font-family: Metropolis;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #222222;
+}
+
+p.teks {
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #9b9b9b;
+}
+
+img.product-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-height: 251px;
+}
+
+div.card {
+  background: #ffffff;
+  box-shadow: 0px 0px 14px rgba(173, 173, 173, 0.25);
+  border-radius: 15px;
+  min-height: 410px;
+}
+
+p.product-name {
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: -10px;
+}
+
+p.price {
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #db3022;
+  margin-top: -10px;
+}
+
+p.teks-store {
+  font-family: Metropolis;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #9b9b9b;
+  margin-top: -5px;
+}
+
+img.rating {
+  width: 14px;
+  height: 14px;
+  margin-top: -23px;
+}
+
+.newHomeOuterBackgroundParentDIV {
+  padding: 5vw 0 1vw 0;
+}
+
+@media only screen and (max-width: 600px) {
+  img.product-img {
+    max-height: 188px;
+  }
+
+  div.card {
+    min-height: 364px;
+    max-height: 364px;
+  }
+}
+
+.pagBtnOff {
+  background: transparent;
+  border: 0.11vw solid #9b9b9b;
+  color: #9b9b9b;
+  transition-duration: 0.3s;
+}
+.pagBtnOn {
+  background: #273ac7;
+  border: 0.11vw solid #273ac7;
+  color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .pagBtn {
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    margin: 3vw 1vw;
+    padding: 1vw;
+    width: 3.5vw;
+  }
+  .filterArrowLeft,
+  .filterArrowRight {
+    height: 1vw;
+    width: 0.5vw;
+  }
+  .filterArrowLeft {
+    margin-right: 0.5vw;
+  }
+  .filterArrowRight {
+    margin-left: 0.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagBtn {
+    border-radius: 1.5vw;
+    font-size: 5vw;
+    margin: 0 2.5vw;
+    padding: 2.5vw;
+    width: 12.5vw;
+  }
+  .filterArrowLeft,
+  .filterArrowRight {
+    height: 5vw;
+    width: 2.5vw;
+  }
+  .filterArrowLeft {
+    margin-right: 2.5vw;
+  }
+  .filterArrowRight {
+    margin-left: 2.5vw;
+  }
+}
