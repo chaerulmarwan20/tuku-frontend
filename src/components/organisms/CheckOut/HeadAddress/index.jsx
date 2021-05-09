@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import axiosApiInstance from "../../../../helpers/axios";
 import "./style.css";
 
-export default function HeadAddress() {
+export default function HeadAddress({ funcAddress }) {
   const urlApi = process.env.REACT_APP_API_URL;
 
   const [address, setAddress] = useState([]);
@@ -88,6 +88,7 @@ export default function HeadAddress() {
           }).then(() => {
             getOneAddress();
             getAllAdress();
+            funcAddress();
           });
         })
         .catch((err) => {
@@ -116,6 +117,7 @@ export default function HeadAddress() {
         }).then(() => {
           getOneAddress();
           getAllAdress();
+          funcAddress();
         });
       })
       .catch((err) => {

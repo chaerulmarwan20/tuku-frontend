@@ -16,6 +16,17 @@ export default function Checkout() {
   const [cart, setCart] = useState([]);
   let total = 0;
 
+  const handleAddress = () => {
+    axiosApiInstance
+      .get(`${urlApi}/address/find-one`)
+      .then((result) => {
+        setAddress(result.data.data[0]);
+      })
+      .catch((err) => {
+        setAddress([]);
+      });
+  };
+
   useEffect(() => {
     axiosApiInstance
       .get(`${urlApi}/address/find-one`)
@@ -51,7 +62,7 @@ export default function Checkout() {
           <div className="row row-checkout">
             <div className="col-8 col-left-checkout">
               <h3>Shipping Address</h3>
-              <HeadAddress />
+              <HeadAddress funcAddress={handleAddress} />
               <CardProCheckout cart={cart} />
             </div>
             <div className="col-4 col-right-checkout">

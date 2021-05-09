@@ -27,6 +27,7 @@ export default function ShoppingSum({ total, address, cart }) {
         text: "Silahkan masukkan alamat lengkap",
         confirmButtonColor: "#273ac7",
       });
+      setPaymentMethod("");
     } else if (paymentMethod === "") {
       Swal.fire({
         icon: "error",
