@@ -69,4 +69,4 @@ Web aplikasi ini dikembangkan oleh sebuah tim yang beranggotakan 5 orang.
 ## VISIT PROJECT !!!
 
 - :white_check_mark: [Backend](https://github.com/chaerulmarwan20/tuku-backend)
-- :rocket: [Tuku App]()
+- :rocket: [Tuku App](https://tukupedia.netlify.app/)
