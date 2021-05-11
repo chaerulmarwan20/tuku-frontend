@@ -84,7 +84,7 @@ export default function RightNav({ func, au, ud }) {
                       }
                       alt="User"
                     />
-                    <div className={css.userProfileNameAndPhone}>
+                    <div className={"displayColumn " + css.userProfileNameAndPhone}>
                       <p className={css.userProfileName}>{ud.name}</p>
                       <p className={css.userProfilePhone}>{ud.phoneNumber}</p>
                     </div>

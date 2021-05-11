@@ -132,4 +132,7 @@ img.rating {
   .filterArrowRight {
     margin-left: 2.5vw;
   }
+  .homePagination {
+    margin-bottom: 10vw;
+  }
 }

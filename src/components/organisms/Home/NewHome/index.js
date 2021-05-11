@@ -117,7 +117,7 @@ function NewHome() {
               })
             : console.log("try again")}
         </div>
-        <div className="displayRow" style={{ justifyContent: "center" }}>
+        <div className={"displayRow " + style.homePagination} style={{ justifyContent: "center" }}>
           {paginationNum.length < 3 ? null : startNum === 0 ? (
             <img
               className={style.filterArrowLeft}
