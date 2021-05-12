@@ -7,12 +7,14 @@
 }
 .box-head-add > h4 {
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
 }
 .box-head-add > p {
-  font-weight: normal;
+  font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 14px;
   line-height: 24px;
   color: #222222;
@@ -34,16 +36,16 @@
 }
 
 .modal .modal-dialog .modal-content .modal-body .modal-title {
-  font-family: Metropolis;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 28px;
   line-height: 28px;
   color: #222222;
 }
 
 .modal .modal-dialog .modal-content .modal-body form label {
-  font-family: Metropolis;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #9b9b9b;
@@ -55,8 +57,8 @@
   box-sizing: border-box;
   filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.05));
   border-radius: 4px;
-  font-family: Metropolis;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #9b9b9b;
@@ -67,8 +69,8 @@
 }
 
 .modal .modal-dialog .modal-content .modal-body form small.text-error {
-  font-family: Metropolis;
   font-weight: 400;
+  font-family: "Metropolis Regular";
   color: #db3022;
 }
 
@@ -78,8 +80,8 @@
   .modal-body
   form
   input.form-control::placeholder {
-  font-family: Metropolis;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #9b9b9b;
@@ -91,8 +93,8 @@
   border: 1px solid #9b9b9b;
   box-sizing: border-box;
   border-radius: 24px;
-  font-family: Metropolis;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #9b9b9b;
@@ -103,8 +105,8 @@
   height: 36px;
   background: #273ac7;
   border-radius: 25px;
-  font-family: Metropolis;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -119,8 +121,8 @@
 }
 
 .modal .modal-dialog .modal-content .modal-body .new-address span {
-  font-family: Metropolis;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 18px;
   color: #9b9b9b;
   transition: 0.5 ease;
@@ -143,24 +145,24 @@
 }
 
 .modal .modal-dialog .modal-content .modal-body .current-address h3 {
-  font-family: Metropolis;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
 }
 
 .modal .modal-dialog .modal-content .modal-body .current-address p {
-  font-family: Metropolis;
   font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 14px;
   line-height: 24px;
   color: #222222;
 }
 
 .modal .modal-dialog .modal-content .modal-body .current-address div {
-  font-family: Metropolis;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #273ac7;

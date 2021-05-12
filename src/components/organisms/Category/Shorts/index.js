@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./shorts.module.css";
 import axios from "axios";
+import Swal from "sweetalert2";
 import Rupiah from "../../../../helpers/rupiah";
 import { FaStar } from "react-icons/fa";
 import { useHistory } from "react-router";
@@ -17,7 +18,12 @@ function Shorts() {
         setGetShorts(dataAllShorts);
       })
       .catch((err) => {
-        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   }, []);
 

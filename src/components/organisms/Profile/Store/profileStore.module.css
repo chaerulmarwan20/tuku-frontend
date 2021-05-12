@@ -2,7 +2,8 @@
   background: white;
 }
 .rightSideUserTitleBigText {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Metropolis Bold";
 }
 .rightSideUserTitleSmallText {
   color: #9b9b9b;
@@ -29,8 +30,8 @@
   .btnDetail {
     background-color: #273ac7;
     border-radius: 25px;
-    font-family: Metropolis;
     font-weight: 500;
+    font-family: "Metropolis Medium";
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
@@ -39,7 +40,7 @@
   .btnDelete {
     background-color: #db3022;
     border-radius: 25px;
-    font-family: Metropolis;
+    font-family: "Metropolis Medium";
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -51,9 +52,11 @@
   }
   .rightSideUserTitleBigText {
     font-size: 1.5vw;
+    font-family: "Metropolis Regular";
   }
   .rightSideUserTitleSmallText {
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     margin: 1vw 0;
   }
   /* MY ORDER - STORE */
@@ -64,6 +67,7 @@
     border-bottom: 0.22vw solid white;
     color: #9b9b9b;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     margin-right: 3vw;
     margin-top: 1vw;
     padding: 0.5vw 0;
@@ -72,7 +76,8 @@
   .selectedMyOrderBtn {
     border-bottom: 0.22vw solid #273ac7;
     color: #273ac7;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
   }
   .rightSideMyOrderDataShow {
     padding: 2.5vw 0;
@@ -96,6 +101,7 @@
   }
   .productSearchInput {
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     width: 100%;
   }
   .productListTable {
@@ -115,6 +121,7 @@
   .productStockTitle {
     color: #9b9b9b;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
   }
   .productPriceTitle,
   .productStockTitle {
@@ -157,6 +164,7 @@
   .myProfileInputLabel {
     color: #9b9b9b;
     font-size: 0.8vw;
+    font-family: "Metropolis Regular";
     margin-bottom: 1.54vw;
     padding: 1vw 0;
   }
@@ -164,6 +172,7 @@
     border: 0.1vw solid #9b9b9b;
     border-radius: 0.5vw;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     padding: 0.77vw 1vw;
     width: 25vw;
   }
@@ -181,6 +190,7 @@
   }
   .myProfileGender {
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     margin-left: 0.7vw;
     margin-right: 2.2vw;
   }
@@ -199,6 +209,7 @@
     border: 0.1vw solid #9b9b9b;
     border-radius: 1.5vw;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     margin-top: 0.5vw;
     padding: 0.5vw 1.5vw;
     transition-duration: 0.3s;
@@ -214,6 +225,7 @@
   .sellBtn {
     border-radius: 2vw;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     float: right;
     margin-top: 2vw;
     padding: 1vw;
@@ -226,7 +238,8 @@
   .sellingProductsTitle {
     border-bottom: 0.1vw solid #d4d4d4;
     font-size: 1.3vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
     padding: 2vw;
   }
   .sellingProductsForm {
@@ -238,12 +251,14 @@
   .sellingProductsLabel {
     color: #9b9b9b;
     font-size: 0.88vw;
+    font-family: "Metropolis Regular";
     margin-bottom: 1vw;
   }
   .sellingProductsInput {
     border: 0.1vw solid #9b9b9b;
     border-radius: 0.33vw;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     padding: 0.5vw 1vw;
     width: 50%;
   }
@@ -292,6 +307,7 @@
   .fotoUtama {
     color: #9b9b9b;
     font-size: 0.9vw;
+    font-family: "Metropolis Regular";
     margin: 1vw 0;
     text-align: center;
     width: 12vw;
@@ -312,7 +328,7 @@
   .btnDetail {
     background-color: #273ac7;
     border-radius: 25px;
-    font-family: Metropolis;
+    font-family: "Metropolis Medium";
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -322,7 +338,7 @@
   .btnDelete {
     background-color: #db3022;
     border-radius: 25px;
-    font-family: Metropolis;
+    font-family: "Metropolis Medium";
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -339,6 +355,7 @@
   }
   .rightSideUserTitleBigText {
     font-size: 4.4vw;
+    font-family: "Metropolis Regular";
   }
   .rightSideUserTitleSmallText {
     margin-bottom: 3vw;
@@ -361,7 +378,8 @@
   .selectedMyOrderBtn {
     color: #273ac7;
     font-size: 3.8vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
   }
   .rightSideMyOrderDataShow {
     padding: 7.5vw 0;
@@ -383,6 +401,7 @@
   }
   .productSearchInput {
     font-size: 5vw;
+    font-family: "Metropolis Regular";
     width: 100%;
   }
   .productListTable {
@@ -403,6 +422,7 @@
   .productStockTitle {
     color: #9b9b9b;
     font-size: 3.8vw;
+    font-family: "Metropolis Regular";
   }
   .productPriceTitle,
   .productStockTitle {
@@ -446,6 +466,7 @@
     border: 0.1vw solid #9b9b9b;
     border-radius: 2vw;
     font-size: 4vw;
+    font-family: "Metropolis Regular";
     margin-bottom: 5.5vw;
     padding: 3vw;
     width: 77vw;
@@ -464,6 +485,7 @@
   }
   .myProfileGender {
     font-size: 4vw;
+    font-family: "Metropolis Regular";
     margin-left: 3.3vw;
   }
   .tes {
@@ -485,6 +507,7 @@
     border: 0.1vw solid #9b9b9b;
     border-radius: 7.5vw;
     font-size: 5vw;
+    font-family: "Metropolis Regular";
     margin-top: 3.3vw;
     padding: 2.5vw 7.5vw;
     transition-duration: 0.3s;
@@ -497,6 +520,7 @@
   .sellBtn {
     border-radius: 10vw;
     font-size: 5vw;
+    font-family: "Metropolis Regular";
     margin: auto;
     margin-top: 2vw;
     padding: 3vw;
@@ -509,7 +533,8 @@
   .sellingProductsTitle {
     border-bottom: 0.1vw solid #d4d4d4;
     font-size: 5vw;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
     padding: 5vw;
     text-align: center;
   }
@@ -522,12 +547,14 @@
   .sellingProductsLabel {
     color: #9b9b9b;
     font-size: 4vw;
+    font-family: "Metropolis Regular";
     margin-bottom: 2vw;
   }
   .sellingProductsInput {
     border: 0.1vw solid #9b9b9b;
     border-radius: 1.5vw;
     font-size: 4vw;
+    font-family: "Metropolis Regular";
     padding: 2.5vw 5vw;
   }
   .sellingProductsFormDescription {

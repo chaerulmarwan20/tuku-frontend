@@ -25,7 +25,7 @@ function OtherProducts({ product }) {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Something went wrong!",
+            text: err.response.data.message,
             confirmButtonColor: "#273ac7",
           });
         });

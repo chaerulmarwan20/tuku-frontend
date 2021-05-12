@@ -1,22 +1,78 @@
-.sidebar { background: white; }
+.sidebar {
+  background: white;
+}
 /* DESKTOP */
-@media(min-width: 768px) {
-   .sidebar { float: right; padding: 3vw; }
-   .profileImage { border-radius: 50%; height: 4vw; width: 4vw; }
-   .userProfileNameAndPhone { padding: 1vw; padding-right: 0; text-align: left; width: 100%; }
-   .userProfileName { font-size: 1.1vw; font-weight: 600; margin: 0.33vw 0; }
-   .userChangeProfileText {color: #6E7191; font-size: 0.9vw;}
-   .penLogo { margin-right: 0.5vw; }
+@media (min-width: 768px) {
+  .sidebar {
+    float: right;
+    padding: 3vw;
+  }
+  .profileImage {
+    border-radius: 50%;
+    height: 4vw;
+    width: 4vw;
+  }
+  .userProfileNameAndPhone {
+    padding: 1vw;
+    padding-right: 0;
+    text-align: left;
+    width: 100%;
+  }
+  .userProfileName {
+    font-family: "Metropolis SemiBold";
+    font-size: 1.1vw;
+    font-weight: 600;
+    margin: 0.33vw 0;
+  }
+  .userChangeProfileText {
+    color: #6e7191;
+    font-family: "Metropolis Regular";
+    font-size: 0.9vw;
+  }
+  .penLogo {
+    margin-right: 0.5vw;
+  }
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
-   .sidebarUser { justify-content: center; padding: 7.7vw 0; }
-   .profileImage { border-radius: 50%; height: 20vw; width: 20vw; }
-   .userProfileNameAndPhone { padding: 1vw; margin-left: 2.5vw; text-align: left; }
-   .userProfileName, .userProfilePhone { float: left; margin: 0; padding: 1vw 2.5vw; width: 50vw; }
-   .userProfileName { font-size: 6vw; font-weight: 600; }
-   .userProfilePhone {color: #6E7191; font-size: 4vw; }
-   .userChangeProfileText { color: #6E7191; font-size: 3.3vw;}
-   .penLogo { margin: 0 3vw; }
+@media (max-width: 768px) {
+  .sidebarUser {
+    justify-content: center;
+    padding: 7.7vw 0;
+  }
+  .profileImage {
+    border-radius: 50%;
+    height: 20vw;
+    width: 20vw;
+  }
+  .userProfileNameAndPhone {
+    padding: 1vw;
+    margin-left: 2.5vw;
+    text-align: left;
+  }
+  .userProfileName,
+  .userProfilePhone {
+    float: left;
+    margin: 0;
+    padding: 1vw 2.5vw;
+    width: 50vw;
+  }
+  .userProfileName {
+    font-family: "Metropolis SemiBold";
+    font-size: 6vw;
+    font-weight: 600;
+  }
+  .userProfilePhone {
+    color: #6e7191;
+    font-family: "Metropolis Regular";
+    font-size: 4vw;
+  }
+  .userChangeProfileText {
+    color: #6e7191;
+    font-family: "Metropolis Regular";
+    font-size: 3.3vw;
+  }
+  .penLogo {
+    margin: 0 3vw;
+  }
 }

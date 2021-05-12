@@ -65,8 +65,8 @@ export default function Register() {
         .then((res) => {
           formik.resetForm();
           Swal.fire({
-            title: "Success!",
-            text: res,
+            title: "Berhasil",
+            text: "Akun kamu telah dibuat, silahkan periksa email kamu untuk mengaktifkan akun kamu",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",
@@ -99,8 +99,8 @@ export default function Register() {
       dispatch(verify(email, token))
         .then((res) => {
           Swal.fire({
-            title: "Success!",
-            text: res,
+            title: "Berhasil",
+            text: "Akun kamu telah diaktifkan, silahkan masuk.",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",

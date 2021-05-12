@@ -12,7 +12,6 @@ export default function MobileNav({ filter, func, au, ud }) {
   const history = useHistory();
   const [searchResult, saveSearchResult] = useState("Empty");
   const [keyword, setKeyword] = useState("");
-  const [role, setRole] = useState(null);
   // FUNCTION
   const searchInputChange = (e) => {
     setKeyword(e.target.value);
@@ -21,11 +20,6 @@ export default function MobileNav({ filter, func, au, ud }) {
     history.push("/product/" + id);
     saveSearchResult("Empty");
   };
-  useEffect(() => {
-    if (ud !== null) {
-      setRole(ud.role);
-    }
-  }, [ud]);
   // USE EFFECT
   useEffect(() => {
     if (keyword === "") {
@@ -107,24 +101,22 @@ export default function MobileNav({ filter, func, au, ud }) {
           </div>
         </div>
         <div className="displayRow" style={{ justifyContent: "space-between" }}>
-          {role !== null && role !== 1 && (
-            <div
-              onClick={() => {
-                history.push("/bag");
-              }}
-              style={{
-                border: "0.60vw solid #9B9B9B",
-                borderRadius: "3.8vw",
-                padding: "2.77vw 3.77vw",
-              }}
-            >
-              <img
-                alt="Cart"
-                src={Cart}
-                style={{ height: "6vw", width: "6vw" }}
-              />
-            </div>
-          )}
+          <div
+            onClick={() => {
+              history.push("/bag");
+            }}
+            style={{
+              border: "0.60vw solid #9B9B9B",
+              borderRadius: "3.8vw",
+              padding: "2.77vw 3.77vw",
+            }}
+          >
+            <img
+              alt="Cart"
+              src={Cart}
+              style={{ height: "6vw", width: "6vw" }}
+            />
+          </div>
           <img
             alt="Filter"
             className={css.filterBtnMobile}

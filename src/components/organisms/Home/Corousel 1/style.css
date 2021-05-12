@@ -19,7 +19,8 @@
 }
 .homeCarouselOneText p {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Metropolis Bold";
   font-size: 3em;
   line-height: 38px;
   color: #ffffff;
@@ -32,9 +33,9 @@
   margin: auto;
 }
 .homeCarouselTwoTitle {
-  font-family: Metropolis;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Metropolis Bold";
   font-size: 34px;
   line-height: 34px;
   color: #222222;
@@ -47,6 +48,7 @@
 }
 .homeCarouselTwoTitle span {
   font-size: 12px;
+  font-family: "Metropolis Regular";
   line-height: 12px;
   color: #9b9b9b;
 }
@@ -58,8 +60,9 @@
   margin-top: 3.3em;
   margin-left: 1.9em;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 2em;
+  font-family: "Metropolis Bold";
   line-height: 0px;
   color: #ffffff;
   display: none;
@@ -77,7 +80,8 @@
   }
   .homeCarouselOneText p {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
     font-size: 2em;
     line-height: 38px;
     color: #ffffff;
@@ -98,13 +102,15 @@
   }
   .homeCarouselOneText p {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.5em;
+    font-family: "Metropolis Bold";
     line-height: 28px;
     color: #ffffff;
   }
   .homeCarouselTwoTitle span {
     font-size: 12px;
+    font-family: "Metropolis Regular";
     line-height: 12px;
     color: #9b9b9b;
   }

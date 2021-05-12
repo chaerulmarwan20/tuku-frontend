@@ -18,25 +18,32 @@ export default function Navbar({ func, au }) {
     localStorage.removeItem("numericSize");
     localStorage.removeItem("category");
     localStorage.removeItem("brand");
-    axios
-      .get(process.env.REACT_APP_API_URL + "/users/find-one", {
-        headers: {
-          authorization: "Bearer " + localStorage.getItem("token"),
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => {
-        setUserData(res.data.data[0]);
-      })
-      .catch((err) => {
-        console.log(err.response);
-      });
+    if (localStorage.getItem("token")) {
+      axios
+        .get(process.env.REACT_APP_API_URL + "/users/find-one", {
+          headers: {
+            authorization: "Bearer " + localStorage.getItem("token"),
+            "Content-Type": "application/json",
+          },
+        })
+        .then((res) => {
+          setUserData(res.data.data[0]);
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "Error!",
+            text: err.response.data.message,
+            confirmButtonColor: "#273ac7",
+          });
+        });
+    }
   }, []);
   const logout = () => {
     Swal.fire({
       icon: "success",
-      title: "Sukses!",
-      text: "Logout berhasil, mengarahkan kembali ke halaman login ~",
+      title: "Berhasil",
+      text: "Berhasil keluar",
       confirmButtonColor: "#273ac7",
     }).then(() => {
       localStorage.clear();

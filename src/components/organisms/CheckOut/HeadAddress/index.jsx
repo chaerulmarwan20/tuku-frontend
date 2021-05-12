@@ -80,7 +80,7 @@ export default function HeadAddress({ funcAddress }) {
         .then((res) => {
           formik.resetForm();
           Swal.fire({
-            title: "Success!",
+            title: "Berhasil",
             text: "Alamat berhasil ditambahkan",
             icon: "success",
             confirmButtonText: "Ok",
@@ -109,7 +109,7 @@ export default function HeadAddress({ funcAddress }) {
       .then((res) => {
         formik.resetForm();
         Swal.fire({
-          title: "Success!",
+          title: "Berhasil",
           text: "Alamat utama berhasil diupdate",
           icon: "success",
           confirmButtonText: "Ok",

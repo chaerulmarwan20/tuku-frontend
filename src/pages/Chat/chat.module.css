@@ -1,6 +1,6 @@
-div.box-side-chat{
-  background: #FFFFFF;
-  border: 1px solid #8E8E93;
+div.box-side-chat {
+  background: #ffffff;
+  border: 1px solid #8e8e93;
   box-sizing: border-box;
   border-radius: 4px;
   margin-top: 50px;
@@ -9,9 +9,9 @@ div.box-side-chat{
   padding-top: 20px;
 }
 
-div.box-main-chat{
-  background: #FFFFFF;
-  border: 1px solid #8E8E93;
+div.box-main-chat {
+  background: #ffffff;
+  border: 1px solid #8e8e93;
   box-sizing: border-box;
   border-radius: 4px;
   height: 583px;
@@ -21,8 +21,8 @@ div.box-main-chat{
   /* padding-top: 20px; */
 }
 
-p.chat-title{
-  font-family: Metropolis;
+p.chat-title {
+  font-family: "Metropolis SemiBold";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -32,11 +32,11 @@ p.chat-title{
   margin-bottom: 25px;
 }
 
-div.line-width{
-  border: 1px solid #8E8E93;
+div.line-width {
+  border: 1px solid #8e8e93;
 }
 
-img.userimg{
+img.userimg {
   margin-left: 20px;
   margin-top: 20px;
   width: 45px;
@@ -44,26 +44,26 @@ img.userimg{
   border-radius: 100%;
 }
 
-p.user-name{
+p.user-name {
   margin-top: 20px;
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
 }
 
-p.message-body{
-  font-family: Metropolis;
+p.message-body {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 14px;
   line-height: 14px;
-  color: #9B9B9B;
+  color: #9b9b9b;
 }
 
-img.main-userimg{
+img.main-userimg {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -72,10 +72,10 @@ img.main-userimg{
   margin-bottom: 10px;
 }
 
-p.main-username{
-  font-family: Metropolis;
+p.main-username {
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -83,9 +83,9 @@ p.main-username{
   margin-left: 20px;
 }
 
-input.input-massage-body{
-  background: #FFFFFF;
-  border: 1px solid #8E8E93;
+input.input-massage-body {
+  background: #ffffff;
+  border: 1px solid #8e8e93;
   border-radius: 23px;
   padding-left: 30px;
   height: 40px;

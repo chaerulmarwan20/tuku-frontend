@@ -1,6 +1,5 @@
 import React from "react";
 import css from "./profile.module.css";
-import Pen from "../../images/Pen.png";
 // MOLECULES
 import { SidebarUser, SidebarStore } from "../../molecules";
 

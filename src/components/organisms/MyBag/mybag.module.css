@@ -1,7 +1,7 @@
 p.title-mybag {
-  font-family: Metropolis;
+  font-family: "Metropolis Bold";
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 34px;
   line-height: 34px;
   color: #222222;
@@ -9,9 +9,9 @@ p.title-mybag {
 }
 
 label.select-all-items {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -32,9 +32,9 @@ input[type="checkbox"] {
 }
 
 p.shop-summary-teks {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -50,18 +50,18 @@ div.box-sum {
 }
 
 p.total-price {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
   color: #9b9b9b;
 }
 
 p.price-value {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 18px;
   line-height: 18px;
   float: right;
@@ -73,9 +73,9 @@ p.price-value {
 button.btn-buy {
   background: #273ac7;
   border-radius: 25px;
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   display: flex;
@@ -114,18 +114,18 @@ img.item-selected {
 }
 
 p.item-name {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 700;
+  font-family: "Metropolis Bold";
   font-size: 16px;
   line-height: 24px;
   color: #000000;
 }
 
 p.store-name {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 12px;
   line-height: 12px;
   color: #9b9b9b;
@@ -138,9 +138,9 @@ p.value {
 }
 
 p.price {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;

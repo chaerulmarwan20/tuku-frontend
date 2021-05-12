@@ -6,6 +6,7 @@
   box-sizing: border-box;
   border: 0.5px solid #dedede;
   font-weight: 500;
+  font-family: "Metropolis Medium";
 }
 
 .btn-order.active {
@@ -20,6 +21,7 @@ select.custom-select {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 17px;
   line-height: 25px;
   color: #273ac7;
@@ -28,6 +30,7 @@ select.custom-select {
 
 select.custom-select option {
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 17px;
   line-height: 25px;
   color: #273ac7;
@@ -51,6 +54,7 @@ ul.pagination-custom li button {
   align-items: center;
   margin-right: 10px;
   font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 18px;
   line-height: 34px;
   letter-spacing: 0.75px;

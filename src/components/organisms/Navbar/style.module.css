@@ -1,85 +1,154 @@
-.navbarCSS { box-shadow: 0px 6px 40px rgba(173, 173, 173, 0.25); position: sticky; top: 0; width: 100%; z-index: 1; }
+.navbarCSS {
+  box-shadow: 0px 6px 40px rgba(173, 173, 173, 0.25);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 /* DESKTOP */
-@media(min-width: 768px) {
-   /* NAVBAR */
-   .navbarTop { 
-      align-items: center; 
-      background: white; 
-      justify-content: space-between;
-      padding: 1.6vw 8vw; 
-   }
-   .navbarBottom { display: none; }
-   .navBtn { display: none; }
-   /* FILTER */
-   .filter { 
-      align-items: center; 
-      height: 100vh; 
-      justify-content: center; 
-      position: fixed; 
-      top: 0; 
-      width: 100vw; 
-      z-index: 2; 
-   }
-   .transparentBackground {
-      background: black;
-      height: 100vh;
-      opacity: 0.5;
-      position: relative;
-      width: 100vw;
-   }
-   .insideFilter {
-      background: white;
-      border-radius: 1vw;
-      position: absolute;
-      width: 30vw;
-   }
-   .filterTop { box-shadow: 0px 0px 6px rgba(53, 50, 50, 0.25); padding: 1vw; }
-   .filterClose { height: 2.5vw; margin-right: 1vw; width: 2.5vw; }
-   .filterText { font-size: 1.5vw; }
-   .filterBottom {  box-shadow: 0px 0.5vw 1vw rgba(53, 50, 50, 0.25); justify-content: space-between; padding: 1.5vw 3vw; width: 100%; }
-   .discardBtn, .applyBtn { border-radius: 1.5vw; font-size: 1vw; padding: 0.5vw; width: 10vw; }
-   .discardBtn { border: 0.1vw solid black; }
+@media (min-width: 768px) {
+  /* NAVBAR */
+  .navbarTop {
+    align-items: center;
+    background: white;
+    justify-content: space-between;
+    padding: 1.6vw 8vw;
+  }
+  .navbarBottom {
+    display: none;
+  }
+  .navBtn {
+    display: none;
+  }
+  /* FILTER */
+  .filter {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+  .transparentBackground {
+    background: black;
+    height: 100vh;
+    opacity: 0.5;
+    position: relative;
+    width: 100vw;
+  }
+  .insideFilter {
+    background: white;
+    border-radius: 1vw;
+    position: absolute;
+    width: 30vw;
+  }
+  .filterTop {
+    box-shadow: 0px 0px 6px rgba(53, 50, 50, 0.25);
+    padding: 1vw;
+  }
+  .filterClose {
+    height: 2.5vw;
+    margin-right: 1vw;
+    width: 2.5vw;
+  }
+  .filterText {
+    font-size: 1.5vw;
+    font-family: "Metropolis Regular";
+  }
+  .filterBottom {
+    box-shadow: 0px 0.5vw 1vw rgba(53, 50, 50, 0.25);
+    justify-content: space-between;
+    padding: 1.5vw 3vw;
+    width: 100%;
+  }
+  .discardBtn,
+  .applyBtn {
+    border-radius: 1.5vw;
+    font-size: 1vw;
+    font-family: "Metropolis Regular";
+    padding: 0.5vw;
+    width: 10vw;
+  }
+  .discardBtn {
+    border: 0.1vw solid black;
+  }
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
-   .navbar { position: sticky; top: 0; width: 100%; }
-   .navbarTop { 
-      align-items: center; 
-      background: white; 
-      border-bottom: 1px solid #E5E5E5;
-      justify-content: space-between;
-      padding: 10vw; 
-   }
-   .navbarBottom { background: white; border-radius: 0 0 24px 24px; padding: 36px 48px; }
-   .navBtn { height: 8vw; width: 8vw; }
-   /* FILTER */
-   .filter { 
-      align-items: center; 
-      height: 100vh; 
-      justify-content: center; 
-      position: fixed; 
-      top: 0; 
-      width: 100vw; 
-      z-index: 2; 
-   }
-   .transparentBackground {
-      background: black;
-      height: 100vh;
-      opacity: 0.5;
-      position: relative;
-      width: 100vw;
-   }
-   .insideFilter {
-      background: white;
-      border-radius: 1vw;
-      position: absolute;
-      width: 77vw;
-   }
-   .filterTop { box-shadow: 0px 0px 6px rgba(53, 50, 50, 0.25); padding: 3vw; }
-   .filterClose { height: 10vw; margin-right: 3vw; width: 10vw; }
-   .filterText { font-size: 5vw; }
-   .filterBottom {  box-shadow: 0px 0.5vw 1vw rgba(53, 50, 50, 0.25); justify-content: space-between; padding: 2.5vw 5vw; width: 100%; }
-   .discardBtn, .applyBtn { border-radius: 5vw; font-size: 3.8vw; padding: 1.5vw; width: 30vw; }
-   .discardBtn { border: 0.1vw solid black; }
+@media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  .navbarTop {
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    justify-content: space-between;
+    padding: 10vw;
+  }
+  .navbarBottom {
+    background: white;
+    border-radius: 0 0 24px 24px;
+    padding: 36px 48px;
+  }
+  .navBtn {
+    height: 8vw;
+    width: 8vw;
+  }
+  /* FILTER */
+  .filter {
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+  .transparentBackground {
+    background: black;
+    height: 100vh;
+    opacity: 0.5;
+    position: relative;
+    width: 100vw;
+  }
+  .insideFilter {
+    background: white;
+    border-radius: 1vw;
+    position: absolute;
+    width: 77vw;
+  }
+  .filterTop {
+    box-shadow: 0px 0px 6px rgba(53, 50, 50, 0.25);
+    padding: 3vw;
+  }
+  .filterClose {
+    height: 10vw;
+    margin-right: 3vw;
+    width: 10vw;
+  }
+  .filterText {
+    font-family: "Metropolis Regular";
+    font-size: 5vw;
+  }
+  .filterBottom {
+    box-shadow: 0px 0.5vw 1vw rgba(53, 50, 50, 0.25);
+    justify-content: space-between;
+    padding: 2.5vw 5vw;
+    width: 100%;
+  }
+  .discardBtn,
+  .applyBtn {
+    border-radius: 5vw;
+    font-family: "Metropolis Regular";
+    font-size: 3.8vw;
+    padding: 1.5vw;
+    width: 30vw;
+  }
+  .discardBtn {
+    border: 0.1vw solid black;
+  }
 }

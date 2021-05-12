@@ -22,7 +22,6 @@ function Index({ product }) {
   const dispatch = useDispatch();
   const [count, setcount] = useState(0);
   const [size, setSize] = useState("");
-  const [role, setRole] = useState("");
 
   const [gallery, setGallery] = useState([]);
   const [mainImg, setMainImg] = useState("");
@@ -38,9 +37,9 @@ function Index({ product }) {
       })
       .catch((err) => {
         Swal.fire({
-          icon: "question",
-          title: "one image only for this product",
-          text: "is that okay for you?",
+          icon: "info",
+          title: "Info!",
+          text: "Hanya satu gambar untuk produk ini",
           confirmButtonColor: "#273ac7",
         });
       });
@@ -136,21 +135,21 @@ function Index({ product }) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Pilih warna item`,
+        text: `Pilih warna produk`,
         confirmButtonColor: "#273ac7",
       });
     } else if (count > product.stock) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Stock item ${product.stock}`,
+        text: `Stok produk ${product.stock}`,
         confirmButtonColor: "#273ac7",
       });
     } else if (arrSizes.includes(String(size)) === false) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Size item ${arrSizes.join(" ")}`,
+        text: `Ukuran produk ${arrSizes.join(" ")}`,
         confirmButtonColor: "#273ac7",
       });
     } else {
@@ -160,7 +159,7 @@ function Index({ product }) {
           Swal.fire({
             icon: "success",
             title: "Berhasil",
-            text: `Item berhasil ditambahkan ke keranjang`,
+            text: `Produk berhasil ditambahkan ke keranjang`,
             confirmButtonColor: "#273ac7",
           });
           setColorActive("");
@@ -175,7 +174,7 @@ function Index({ product }) {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: `${err.message}`,
+            text: err.response.data.message,
             confirmButtonColor: "#273ac7",
           });
         });
@@ -204,21 +203,21 @@ function Index({ product }) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Pilih warna item`,
+        text: `Pilih warna barang`,
         confirmButtonColor: "#273ac7",
       });
     } else if (count > product.stock) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Stock item ${product.stock}`,
+        text: `Stok barang ${product.stock}`,
         confirmButtonColor: "#273ac7",
       });
     } else if (arrSizes.includes(String(size)) === false) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `Size item ${arrSizes.join(" ")}`,
+        text: `Ukuran barang ${arrSizes.join(" ")}`,
         confirmButtonColor: "#273ac7",
       });
     } else {
@@ -238,29 +237,12 @@ function Index({ product }) {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: `${err.message}`,
+            text: err.response.data.message,
             confirmButtonColor: "#273ac7",
           });
         });
     }
   };
-
-  useEffect(() => {
-    axios
-      .get(process.env.REACT_APP_API_URL + "/users/find-one", {
-        headers: {
-          authorization: "Bearer " + localStorage.getItem("token"),
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => {
-        const data = res.data.data[0];
-        setRole(data.role);
-      })
-      .catch((err) => {
-        console.log(err.response);
-      });
-  }, []);
 
   return (
     <div>
@@ -413,36 +395,34 @@ function Index({ product }) {
                     </div>
                   </div>
                 </div>
-                {role === 2 && (
-                  <div className="prodButtonsBottom">
-                    <div className="prodButtonItem">
-                      <Button
-                        btnClr="transparent"
-                        cls="prodButtonChat"
-                        ftClr="black"
-                        val="Chat"
-                      />
-                    </div>
-                    <div className="prodButtonItem">
-                      <Button
-                        btnClr="transparent"
-                        cls="prodButtonAddBag"
-                        ftClr="black"
-                        val="Add bag"
-                        func={() => handleAddBag()}
-                      />
-                    </div>
-                    <div className="prodButtonItem">
-                      <Button
-                        btnClr="#273AC7"
-                        cls="prodButtonBuyNow"
-                        ftClr="white"
-                        val="Buy Now"
-                        func={() => handleBuy()}
-                      />
-                    </div>
+                <div className="prodButtonsBottom">
+                  <div className="prodButtonItem">
+                    <Button
+                      btnClr="transparent"
+                      cls="prodButtonChat"
+                      ftClr="black"
+                      val="Chat"
+                    />
                   </div>
-                )}
+                  <div className="prodButtonItem">
+                    <Button
+                      btnClr="transparent"
+                      cls="prodButtonAddBag"
+                      ftClr="black"
+                      val="Add bag"
+                      func={() => handleAddBag()}
+                    />
+                  </div>
+                  <div className="prodButtonItem">
+                    <Button
+                      btnClr="#273AC7"
+                      cls="prodButtonBuyNow"
+                      ftClr="white"
+                      val="Buy Now"
+                      func={() => handleBuy()}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

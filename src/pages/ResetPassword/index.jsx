@@ -55,8 +55,8 @@ export default function Reset() {
         .then((res) => {
           formik.resetForm();
           Swal.fire({
-            title: "Success!",
-            text: res,
+            title: "Berhasil",
+            text: "Kata sandi telah diubah! Silahkan masuk.",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",
@@ -73,7 +73,7 @@ export default function Reset() {
             title: "Error!",
             text:
               err.message === `"confirmPassword" must be [ref:password]`
-                ? "Password's not match"
+                ? "Kata sandi tidak cocok"
                 : err.message,
             icon: "error",
             confirmButtonText: "Ok",
@@ -86,8 +86,8 @@ export default function Reset() {
           formik.resetForm();
           setStatus(true);
           Swal.fire({
-            title: "Success!",
-            text: res,
+            title: "Berhasil",
+            text: "Silahkan periksa email kamu untuk mengatur ulang kata sandi kamu!",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",

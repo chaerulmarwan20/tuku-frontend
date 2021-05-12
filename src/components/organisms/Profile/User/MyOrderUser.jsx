@@ -1,13 +1,13 @@
 import css from "./profileUser.module.css";
 import "./profileUser.css";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 // IMAGES
 import Left from "../../../images/left.png";
 import Right from "../../../images/right.png";
 import NoOrder from "../../../images/NoOrder.png";
 // ATOMS
 import { Button } from "../../../atoms";
-import { useEffect } from "react";
 import axiosApiInstance from "../../../../helpers/axios";
 import Rupiah from "../../../../helpers/rupiah";
 
@@ -91,7 +91,12 @@ export default function MyOrderUser({ smoum }) {
         setMyOrderDetail(res.data.data);
       })
       .catch((err) => {
-        console.log(err.response.dat.message);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   };
 

@@ -48,13 +48,13 @@ export default function ShoppingSum({ total, address, cart }) {
           Swal.fire({
             icon: "success",
             title: "Berhasil",
-            text: "Checkout berhasil, silahkan lakukan pembayaran!",
+            text: "Checkout berhasil!",
             confirmButtonColor: "#273ac7",
           }).then(() => {
             Swal.fire({
               icon: "info",
               title: "Info!",
-              text: "Mengarahkan ke home",
+              text: "Mengarahkan ke halaman home",
               confirmButtonColor: "#273ac7",
             }).then(() => {
               history.push("/");

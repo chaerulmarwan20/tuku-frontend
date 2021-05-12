@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import css from "./style.module.css";
 import { useHistory } from "react-router";
 // IMAGES
@@ -10,26 +10,18 @@ import { Notification } from "../../../molecules";
 
 export default function RightNav({ func, au, ud }) {
   const history = useHistory();
-  const [role, setRole] = useState(null);
-  useEffect(() => {
-    if (ud !== null) {
-      setRole(ud.role);
-    }
-  }, [ud]);
   return (
     <div className={"displayRow " + css.rightNav}>
       <div></div>
       <div className="displayRow">
-        {role !== null && role !== 1 && (
-          <img
-            className={"hoverThis " + css.cartLogo}
-            onClick={() => {
-              history.push("/bag");
-            }}
-            src={Cart}
-            alt="Cart"
-          />
-        )}
+        <img
+          className={"hoverThis " + css.cartLogo}
+          onClick={() => {
+            history.push("/bag");
+          }}
+          src={Cart}
+          alt="Cart"
+        />
         {ud === null ? (
           <div
             className="displayRow"

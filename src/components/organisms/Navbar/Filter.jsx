@@ -34,8 +34,7 @@ export default function Filter({ func }) {
       Swal.fire({
         icon: "error",
         title: "Error!",
-        text:
-          "Jika ingin mencari sendal dan sepatu, harap masukkan juga ukurannya!",
+        text: "Jika ingin mencari sendal dan sepatu, harap masukkan juga ukurannya!",
         confirmButtonColor: "#273ac7",
       });
     } else if (
@@ -47,8 +46,7 @@ export default function Filter({ func }) {
       Swal.fire({
         icon: "error",
         title: "Error!",
-        text:
-          "Jika ingin mencari pakaian atau celana dan semacamnya, harap masukkan juga ukurannya!",
+        text: "Jika ingin mencari pakaian atau celana dan semacamnya, harap masukkan juga ukurannya!",
         confirmButtonColor: "#273ac7",
       });
     } else if (
@@ -61,15 +59,14 @@ export default function Filter({ func }) {
       Swal.fire({
         icon: "error",
         title: "Error!",
-        text:
-          "Setidaknya minimal harus ada satu pilihan untuk fitur filter pencarian!",
+        text: "Setidaknya minimal harus ada satu pilihan untuk fitur filter pencarian!",
         confirmButtonColor: "#273ac7",
       });
     } else {
       Swal.fire({
         icon: "success",
-        title: "Berhasil!",
-        text: "Berhasil menambahkan filter pencarian yang di pilih!",
+        title: "Berhasil",
+        text: "Berhasil menambahkan filter pencarian yang dipilih!",
         confirmButtonColor: "#273ac7",
       }).then(() => {
         localStorage.removeItem("color");

@@ -98,15 +98,20 @@ export default function MyAccount({
       .then((res) => {
         if (res) {
           Swal.fire({
-            title: "Success",
+            title: "Berhasil",
             icon: "success",
-            text: "Data berhasil diupdate",
+            text: "Profil berhasil diubah",
             confirmButtonColor: "#273ac7",
           });
         }
       })
       .catch((err) => {
-        console.log(err.response);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   };
   useEffect(() => {}, [ud]);

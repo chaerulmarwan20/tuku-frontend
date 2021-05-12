@@ -1,13 +1,12 @@
-import React from 'react'
-import style from './chat.module.css'
-import { Navbar } from '../../components/organisms'
-import {userprofile} from '../../components/images'
+import React from "react";
+import style from "./chat.module.css";
+import { Navbar } from "../../components/organisms";
+import { userprofile } from "../../components/images";
 
 function ChatPage() {
   return (
     <div>
       <Navbar />
-
       <div className="container">
         <div className="row">
           <div className="col-lg-4">
@@ -17,7 +16,7 @@ function ChatPage() {
 
               <div className="row">
                 <div className="col-3">
-                  <img className={style["userimg"]} src={userprofile} alt=""/>
+                  <img className={style["userimg"]} src={userprofile} alt="" />
                 </div>
                 <div className="col">
                   <p className={style["user-name"]}>Jonas Adam</p>
@@ -28,16 +27,20 @@ function ChatPage() {
           </div>
           <div className="col">
             <div className={style["box-main-chat"]}>
-              <img src={userprofile} alt="" className={style["main-userimg"]}/>
+              <img src={userprofile} alt="" className={style["main-userimg"]} />
               <p className={style["main-username"]}>Jonas adam</p>
               <div className={style["line-width"]}></div>
-              <input className={style["input-massage-body"]} type="text" placeholder="type message..." />
+              <input
+                className={style["input-massage-body"]}
+                type="text"
+                placeholder="type message..."
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ChatPage
+export default ChatPage;

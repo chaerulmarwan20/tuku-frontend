@@ -35,8 +35,8 @@ export default function Login() {
         .then((res) => {
           formik.resetForm();
           Swal.fire({
-            title: "Success!",
-            text: res,
+            title: "Berhasil",
+            text: "Berhasil masuk",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",

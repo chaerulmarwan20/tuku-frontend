@@ -35,7 +35,7 @@ export default function StoreProfile({ cau, au, ud, sd, status, storeImage }) {
       .then((res) => {
         Swal.fire({
           title: "Success!",
-          text: "Data store berhasil diupdate",
+          text: "Toko berhasil diubah",
           icon: "success",
           confirmButtonText: "Ok",
           confirmButtonColor: "#273ac7",
@@ -70,7 +70,12 @@ export default function StoreProfile({ cau, au, ud, sd, status, storeImage }) {
         });
       })
       .catch((err) => {
-        console.log(err.response);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   }, []);
   return (

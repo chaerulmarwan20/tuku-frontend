@@ -2,9 +2,8 @@ import css from "./profileUser.module.css";
 import Swal from "sweetalert2";
 // ATOMS
 import { Button } from "../../../atoms";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axiosApiInstance from "../../../../helpers/axios";
-import { useState } from "react";
 
 export default function ShippingAddress({ func }) {
   const [shippingDest, setShippingDest] = useState([]);
@@ -16,8 +15,8 @@ export default function ShippingAddress({ func }) {
       })
       .then((res) => {
         Swal.fire({
-          title: "Success!",
-          text: "Alamat utama berhasil diupdate",
+          title: "Berhasil",
+          text: "Alamat utama berhasil diubah",
           icon: "success",
           confirmButtonText: "Ok",
           confirmButtonColor: "#273ac7",
@@ -51,13 +50,13 @@ export default function ShippingAddress({ func }) {
 
   const handleDeleteAddress = (id) => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "Apakah kamu yakin?",
+      text: "Kamu tidak akan dapat mengembalikan ini!",
       icon: "question",
       showCancelButton: true,
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Ya, hapus!",
       confirmButtonColor: "#db3022",
-      cancelButtonText: "No, cancel!",
+      cancelButtonText: "Tidak, batalkan!",
       cancelButtonColor: "#1EC15F",
       reverseButtons: true,
     }).then((result) => {
@@ -67,8 +66,8 @@ export default function ShippingAddress({ func }) {
           .then((res) => {
             Swal.fire({
               icon: "success",
-              title: "Success!",
-              text: res.data.message,
+              title: "Berhasil",
+              text: "Alamat berhasil dihapus",
               confirmButtonColor: "#273ac7",
             }).then(() => {
               axiosApiInstance
@@ -97,8 +96,8 @@ export default function ShippingAddress({ func }) {
           });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
-          title: "Cancelled!",
-          text: "Your address is safe :)",
+          title: "Dibatalkan!",
+          text: "Alamat kamu aman :)",
           icon: "info",
           confirmButtonColor: "#273ac7",
         });
@@ -114,7 +113,12 @@ export default function ShippingAddress({ func }) {
         setShippingDest(res.data.data);
       })
       .catch((err) => {
-        console.log(err.response);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   }, []);
   return (

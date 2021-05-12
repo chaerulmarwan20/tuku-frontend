@@ -30,7 +30,7 @@ export default function Product() {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "Cannot get this product!",
+            text: "Tidak dapat menampilkan produk!",
             confirmButtonColor: "#273ac7",
           });
         });

@@ -1,6 +1,6 @@
 import "./style.css";
 import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 // ATOMS
@@ -55,9 +55,8 @@ export default function ProfilePage() {
   const setProductPhoto = (num) => {
     Swal.fire({
       icon: "info",
-      title: "Change Avatar",
-      text:
-        "Silahkan pilih sebuah gambar dari komputer-mu untuk dijadikan gambar produk jualan kamu :",
+      title: "Mengubah avatar",
+      text: "Silahkan pilih sebuah gambar dari komputer-mu untuk dijadikan gambar produk jualan kamu :",
       input: "file",
       inputAttributes: {
         accept: "image/*",
@@ -73,8 +72,8 @@ export default function ProfilePage() {
         if (res.value === null) {
           Swal.fire({
             icon: "question",
-            title: "Kosong ?!",
-            text: "Gimana uploadnya nih kalau gambarnya gak ada? XD",
+            title: "Kosong ?",
+            text: "Gimana uploadnya nih kalau gambarnya tidak ada? XD",
             confirmButtonColor: "#273ac7",
           });
         } else {
@@ -110,8 +109,8 @@ export default function ProfilePage() {
       .catch((err) => {
         Swal.fire({
           icon: "error",
-          title: "Batal~",
-          text: "Penambahan gambar produk dibatalkan ~",
+          title: "Batal",
+          text: "Penambahan gambar produk dibatalkan",
           confirmButtonColor: "#273ac7",
         });
       });
@@ -120,9 +119,8 @@ export default function ProfilePage() {
   const changeAvatarUser = () => {
     Swal.fire({
       icon: "info",
-      title: "Change Avatar",
-      text:
-        "Silahkan pilih sebuah gambar dari komputer-mu untuk dijadikan Profile Picture baru kamu :",
+      title: "Mengubah avatar",
+      text: "Silahkan pilih sebuah gambar dari komputer-mu untuk dijadikan gambar profil baru kamu :",
       input: "file",
       inputAttributes: {
         accept: "image/*",
@@ -138,8 +136,8 @@ export default function ProfilePage() {
         if (res.value === null) {
           Swal.fire({
             icon: "question",
-            title: "Kosong ?!",
-            text: "Gimana uploadnya nih kalau gambarnya gak ada? XD",
+            title: "Kosong ?",
+            text: "Gimana uploadnya nih kalau gambarnya tidak ada? XD",
             confirmButtonColor: "#273ac7",
           });
         } else {
@@ -160,8 +158,8 @@ export default function ProfilePage() {
       .catch((err) => {
         Swal.fire({
           icon: "error",
-          title: "Batal~",
-          text: "Perubahan gambar profile user dibatalkan!",
+          title: "Batal",
+          text: "Perubahan gambar profil dibatalkan!",
           confirmButtonColor: "#273ac7",
         });
       });
@@ -186,7 +184,12 @@ export default function ProfilePage() {
         }
       })
       .catch((err) => {
-        console.log(err.response);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   }, []);
   return (

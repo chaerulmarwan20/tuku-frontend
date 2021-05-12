@@ -1,15 +1,15 @@
 p.title {
-  font-family: Metropolis;
   font-size: 34px;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   line-height: 34px;
   color: #222222;
 }
 
 p.teks {
-  font-family: Metropolis;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 12px;
   line-height: 12px;
   color: #9b9b9b;
@@ -29,9 +29,9 @@ div.card {
 }
 
 p.product-name {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 24px;
   color: #000000;
@@ -39,9 +39,9 @@ p.product-name {
 }
 
 p.price {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
   color: #db3022;
@@ -49,9 +49,9 @@ p.price {
 }
 
 p.teks-store {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 12px;
   line-height: 12px;
   color: #9b9b9b;
@@ -92,6 +92,7 @@ img.rating {
   .pagBtn {
     border-radius: 0.5vw;
     font-size: 1vw;
+    font-family: "Metropolis Regular";
     margin: 3vw 1vw;
     padding: 1vw;
     width: 3.5vw;
@@ -113,6 +114,7 @@ img.rating {
   .pagBtn {
     border-radius: 1.5vw;
     font-size: 5vw;
+    font-family: "Metropolis Regular";
     margin: 0 2.5vw;
     padding: 2.5vw;
     width: 12.5vw;

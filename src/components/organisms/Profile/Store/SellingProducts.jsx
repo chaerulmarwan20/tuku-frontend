@@ -1,5 +1,5 @@
 import css from "./profileStore.module.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import axiosApiInstance from "../../../../helpers/axios";
 import Swal from "sweetalert2";
 // ATOMS
@@ -60,7 +60,7 @@ export default function SellingProducts({
     ) {
       Swal.fire({
         title: "Error!",
-        text: "Masukkan minimal 5 gambar product",
+        text: "Masukkan minimal 5 gambar produk",
         icon: "error",
         confirmButtonText: "Ok",
         confirmButtonColor: "#273ac7",
@@ -74,7 +74,7 @@ export default function SellingProducts({
     ) {
       Swal.fire({
         title: "Error!",
-        text: "Isi semua field",
+        text: "Semua data dibutuhkan!",
         icon: "error",
         confirmButtonText: "Ok",
         confirmButtonColor: "#273ac7",
@@ -101,7 +101,7 @@ export default function SellingProducts({
         .then((res) => {
           Swal.fire({
             title: "Success!",
-            text: "Product berhasil ditambahkan",
+            text: "Produk berhasil ditambahkan",
             icon: "success",
             confirmButtonText: "Ok",
             confirmButtonColor: "#273ac7",
@@ -109,7 +109,7 @@ export default function SellingProducts({
             Swal.fire({
               icon: "info",
               title: "Info!",
-              text: "Mengarahkan ke halaman profile",
+              text: "Mengarahkan ke halaman profil",
               confirmButtonColor: "#273ac7",
             }).then(() => {
               window.location.reload();

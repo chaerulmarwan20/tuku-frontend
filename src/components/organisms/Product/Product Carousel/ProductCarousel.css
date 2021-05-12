@@ -8,7 +8,7 @@
   width: 70%;
   margin: auto;
   padding: 2vw 0;
-  font-family: Metropolis;
+  font-family: "Metropolis Medium";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -45,17 +45,17 @@
     margin-left: 28px;
 } */
 .productTopBotContent p {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 28px;
   line-height: 2vw;
   margin-bottom: 3px;
 }
 .prodTextTiny {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
   margin-top: 5px;
@@ -65,9 +65,9 @@
   margin-top: 2vw;
 }
 .productTopBotContentPrice p {
-  font-family: Metropolis;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Metropolis Bold";
   font-size: 2em;
   line-height: 33px;
   color: #222222;
@@ -86,6 +86,7 @@
 .productTopBotContentColor p {
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -130,9 +131,9 @@
   margin: 0;
 }
 .productSizeAndCountItem span {
-  font-family: Metropolis;
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 21px;
   line-height: 16px;
   color: #222222;
@@ -248,17 +249,17 @@
     margin-bottom: 10px;
   }
   .productTopBotContent p {
-    font-family: Metropolis;
     font-style: normal;
     font-weight: 600;
+    font-family: "Metropolis SemiBold";
     font-size: 1.5em;
     line-height: 1em;
     margin-bottom: 3px;
   }
   .productTopBotContentPrice p {
-    font-family: Metropolis;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
     font-size: 1.5em;
     line-height: 33px;
     color: #222222;

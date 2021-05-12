@@ -124,19 +124,24 @@ export default function MyProducts({ smpmd, smpmm }) {
         setProductDetail(res.data.data);
       })
       .catch((err) => {
-        console.log(err.response.data.message);
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
+          confirmButtonColor: "#273ac7",
+        });
       });
   };
 
   const handleClickDelete = (id) => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "Apakah kamu yakin?",
+      text: "Kamu tidak akan dapat mengembalikan ini!",
       icon: "question",
       showCancelButton: true,
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Ya, hapus!",
       confirmButtonColor: "#db3022",
-      cancelButtonText: "No, cancel!",
+      cancelButtonText: "Tidak, batalkan!",
       cancelButtonColor: "#1EC15F",
       reverseButtons: true,
     }).then((result) => {
@@ -146,8 +151,8 @@ export default function MyProducts({ smpmd, smpmm }) {
           .then((res) => {
             Swal.fire({
               icon: "success",
-              title: "Success!",
-              text: res.data.message,
+              title: "Berhasil!",
+              text: "Produk berhasil dihapus",
               confirmButtonColor: "#273ac7",
             }).then(() => {
               axiosApiInstance
@@ -171,8 +176,8 @@ export default function MyProducts({ smpmd, smpmm }) {
           });
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
-          title: "Cancelled!",
-          text: "Your product is safe :)",
+          title: "Dibatalkan!",
+          text: "Produk kamu aman :)",
           icon: "info",
           confirmButtonColor: "#273ac7",
         });

@@ -1,147 +1,147 @@
-h2.title{
-    font-family: Metropolis;
-    font-size: 34px;
-    font-weight: 600;
-    line-height: 34px;
-    color: #222222;
-    margin-top: 50px;
-  }
-  
-  p.teks{
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 12px;
-    color: #9B9B9B;
-  }
-p.title{
-  font-family: Metropolis;
+h2.title {
   font-size: 34px;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   line-height: 34px;
   color: #222222;
   margin-top: 50px;
 }
 
-p.teks{
-  font-family: Metropolis;
+p.teks {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
+  font-family: "Metropolis Regular";
   font-size: 12px;
   line-height: 12px;
-  color: #9B9B9B;
+  color: #9b9b9b;
+}
+p.title {
+  font-size: 34px;
+  font-weight: 600;
+  font-family: "Metropolis SemiBold";
+  line-height: 34px;
+  color: #222222;
+  margin-top: 50px;
 }
 
-img.product-img{
+p.teks {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Metropolis Regular";
+  font-size: 12px;
+  line-height: 12px;
+  color: #9b9b9b;
+}
+
+img.product-img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   max-height: 251px;
 }
 
-div.card{
-  background: #FFFFFF;
+div.card {
+  background: #ffffff;
   box-shadow: 0px 0px 14px rgba(173, 173, 173, 0.25);
   border-radius: 15px;
   max-height: 410px;
   min-height: 410px;
 }
 
-p.product-name{
-  font-family: Metropolis;
+p.product-name {
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   margin-top: -10px;
 }
 
-p.price{
-  font-family: Metropolis;
+p.price {
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
-  color: #DB3022;
+  color: #db3022;
   margin-top: -10px;
 }
 
-p.teks-store{
-  font-family: Metropolis;
+p.teks-store {
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 12px;
   line-height: 12px;
-  color: #9B9B9B;
+  color: #9b9b9b;
   margin-top: -5px;
 }
 
-img.rating{
+img.rating {
   width: 14px;
   height: 14px;
   margin-top: -23px;
 }
 
-h3.product-name{
-  font-family: Metropolis;
+h3.product-name {
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 26px;
   line-height: 34px;
   color: #000000;
   margin-top: -10px;
 }
-h4.price{
-  font-family: Metropolis;
+h4.price {
   font-style: normal;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 26px;
   line-height: 26px;
-  color: #DB3022;
+  color: #db3022;
   margin-top: -10px;
 }
 
-  
 @media only screen and (max-width: 600px) {
-  img.product-img{
+  img.product-img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 240px;
     object-fit: cover;
   }
-  
-  div.card{
-    background: #FFFFFF;
+
+  div.card {
+    background: #ffffff;
     box-shadow: 0px 0px 14px rgba(173, 173, 173, 0.25);
     border-radius: 15px;
     height: 360px;
   }
-  div.card:hover{
+  div.card:hover {
     cursor: pointer;
   }
 
-  img.rating{
+  img.rating {
     width: 14px;
     height: 14px;
     margin-top: -23px;
   }
-  h3.product-name{
+  h3.product-name {
     font-size: 16px;
+    font-family: "Metropolis Regular";
   }
-  
-  h4.price{
-    font-family: Metropolis;
+
+  h4.price {
     font-style: normal;
     font-weight: 500;
+    font-family: "Metropolis Medium";
     font-size: 18px;
     line-height: 26px;
-    color: #DB3022;
+    color: #db3022;
     margin-top: -10px;
   }
-  
-  div.card{
-    min-height:410px;
+
+  div.card {
+    min-height: 410px;
     max-height: 410px;
   }
 }

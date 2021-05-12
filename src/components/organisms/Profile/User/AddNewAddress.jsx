@@ -4,9 +4,8 @@ import Close from "../../../images/close.png";
 // ATOMS
 import { Button, Input } from "../../../atoms";
 import axiosApiInstance from "../../../../helpers/axios";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
-import { useHistory } from "react-router";
 
 export default function AddNewAddress({
   closeAddAddress,
@@ -15,7 +14,6 @@ export default function AddNewAddress({
   removeExistAddress,
 }) {
   const [isPrimary, setIsPrimary] = useState(false);
-  const history = useHistory();
 
   const updateAddress = () => {
     na.isPrimary = isPrimary;
@@ -28,8 +26,8 @@ export default function AddNewAddress({
         if (res) {
           Swal.fire({
             icon: "success",
-            title: "Success!",
-            text: "Mengarahkan ke halaman profile",
+            title: "Berhasil!",
+            text: "Mengarahkan ke halaman profil",
             confirmButtonColor: "#273ac7",
           }).then(() => {
             window.location.reload();
@@ -38,8 +36,9 @@ export default function AddNewAddress({
       })
       .catch((err) => {
         Swal.fire({
-          title: "Please fill correctly!",
-          icon: "warning",
+          icon: "error",
+          title: "Error!",
+          text: err.response.data.message,
           confirmButtonColor: "#273ac7",
         });
       });

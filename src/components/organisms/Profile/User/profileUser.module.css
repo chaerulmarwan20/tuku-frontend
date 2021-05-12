@@ -3,6 +3,7 @@
 }
 .rightSideUserTitleBigText {
   font-weight: bold;
+  font-family: "Metropolis Bold";
 }
 .rightSideUserTitleSmallText {
   color: #9b9b9b;
@@ -26,7 +27,7 @@
   .btnDetail {
     background-color: #273ac7;
     border-radius: 25px;
-    font-family: Metropolis;
+    font-family: "Metropolis Medium";
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -37,9 +38,11 @@
     border-bottom: 0.1vw solid #d4d4d4;
   }
   .rightSideUserTitleBigText {
+    font-family: "Metropolis Regular";
     font-size: 1.5vw;
   }
   .rightSideUserTitleSmallText {
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     margin: 1vw 0;
   }
@@ -50,6 +53,7 @@
   .myOrderBtn {
     border-bottom: 0.22vw solid white;
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     margin-right: 3vw;
     margin-top: 1vw;
@@ -59,7 +63,8 @@
   .selectedMyOrderBtn {
     border-bottom: 0.22vw solid #273ac7;
     color: #273ac7;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
   }
   .rightSideMyOrderDataShow {
     padding: 2.5vw 0;
@@ -76,6 +81,7 @@
   .addNewAddressBtn {
     border: 0.15vw dashed #9b9b9b;
     border-radius: 0.5vw;
+    font-family: "Metropolis Regular";
     font-size: 1.1vw;
     margin: 2vw 0;
     padding: 2vw;
@@ -98,9 +104,11 @@
   .changeAddressBtn,
   .deleteAddressBtn {
     font-size: 1vw;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Metropolis Bold";
   }
   .changeAddressLocation {
+    font-family: "Metropolis Regular";
     font-size: 0.9vw;
     margin: 1vw 0;
   }
@@ -141,7 +149,8 @@
   }
   .addNewAddressText {
     font-size: 1.77vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
   }
   .addNewAddressButtonArea {
     float: right;
@@ -150,6 +159,7 @@
   .addressCancelButton,
   .addressSaveButton {
     border-radius: 1.5vw;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
   }
   .addressCancelButton {
@@ -170,12 +180,14 @@
   }
   .inputLabel {
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 0.8vw;
     margin-bottom: 0.5vw;
   }
   .newInputAddress {
     border: 0.1vw solid #9b9b9b;
     border-radius: 0.5vw;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     padding: 0.75vw 1vw;
   }
@@ -191,6 +203,7 @@
   }
   .makeItThePrimaryAddress {
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     margin-top: 1vw;
   }
@@ -215,6 +228,7 @@
   }
   .myProfileInputLabel {
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 0.8vw;
     margin-bottom: 1.54vw;
     padding: 1vw 0;
@@ -222,6 +236,7 @@
   .myProfileInput {
     border: 0.1vw solid #9b9b9b;
     border-radius: 0.5vw;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     padding: 0.77vw 1vw;
     width: 25vw;
@@ -239,6 +254,7 @@
     width: 0.8vw;
   }
   .myProfileGender {
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     margin-left: 0.7vw;
     margin-right: 2.2vw;
@@ -257,6 +273,7 @@
   .myProfileSelectImage {
     border: 0.1vw solid #9b9b9b;
     border-radius: 1.5vw;
+    font-family: "Metropolis Regular";
     font-size: 1vw;
     margin-top: 0.5vw;
     padding: 0.5vw 1.5vw;
@@ -319,7 +336,7 @@
   .btnDetail {
     background-color: #273ac7;
     border-radius: 25px;
-    font-family: Metropolis;
+    font-family: "Metropolis Medium";
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -331,6 +348,7 @@
     text-align: center;
   }
   .rightSideUserTitleBigText {
+    font-family: "Metropolis Regular";
     font-size: 4.4vw;
   }
   .rightSideUserTitleSmallText {
@@ -354,7 +372,8 @@
   .selectedMyOrderBtn {
     color: #273ac7;
     font-size: 3.8vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
   }
   .rightSideMyOrderDataShow {
     padding: 7.5vw 0;
@@ -370,6 +389,7 @@
   .addNewAddressBtn {
     border: 0.33vw dashed #9b9b9b;
     border-radius: 2.5vw;
+    font-family: "Metropolis Regular";
     font-size: 5vw;
     margin: 5vw 0;
     padding: 2vw;
@@ -391,10 +411,12 @@
   .changeAddressPeopleName,
   .changeAddressBtn {
     font-size: 4.5vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
     text-align: center;
   }
   .changeAddressLocation {
+    font-family: "Metropolis Regular";
     font-size: 4vw;
     margin: 5vw 0;
     text-align: center;
@@ -432,7 +454,8 @@
   }
   .addNewAddressText {
     font-size: 7.7vw;
-    font-weight: bold;
+    font-family: "Metropolis Bold";
+    font-weight: 700;
     text-align: center;
   }
   .addNewAddressButtonArea {
@@ -442,6 +465,7 @@
   .addressCancelButton,
   .addressSaveButton {
     border-radius: 7.5vw;
+    font-family: "Metropolis Regular";
     font-size: 5vw;
     width: 33vw;
   }
@@ -464,12 +488,14 @@
   }
   .inputLabel {
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 3.8vw;
     margin-bottom: 0.5vw;
   }
   .newInputAddress {
     border: 0.1vw solid #9b9b9b;
     border-radius: 1vw;
+    font-family: "Metropolis Regular";
     font-size: 3.8vw;
     padding: 1.5vw 3vw;
   }
@@ -485,6 +511,7 @@
   }
   .makeItThePrimaryAddress {
     color: #9b9b9b;
+    font-family: "Metropolis Regular";
     font-size: 3.8vw;
     margin-top: 5vw;
   }
@@ -510,6 +537,7 @@
   .myProfileInput {
     border: 0.1vw solid #9b9b9b;
     border-radius: 2vw;
+    font-family: "Metropolis Regular";
     font-size: 4vw;
     margin-bottom: 5.5vw;
     padding: 3vw;
@@ -528,6 +556,7 @@
     width: 5vw;
   }
   .myProfileGender {
+    font-family: "Metropolis Regular";
     font-size: 4vw;
     margin-left: 3.3vw;
   }
@@ -549,6 +578,7 @@
   .myProfileSelectImage {
     border: 0.1vw solid #9b9b9b;
     border-radius: 7.5vw;
+    font-family: "Metropolis Regular";
     font-size: 5vw;
     margin-top: 3.3vw;
     padding: 2.5vw 7.5vw;
@@ -595,6 +625,7 @@
     position: absolute;
   }
   .dropdownDataFont {
+    font-family: "Metropolis Regular";
     font-size: 3.8vw;
   }
   .dropdownDataArrow {

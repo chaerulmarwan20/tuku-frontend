@@ -12,6 +12,7 @@
   background: #273ac7;
   border-radius: 25px;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -19,6 +20,7 @@
 }
 .box-shop-checkout > h3 {
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -31,18 +33,21 @@
 }
 .box-shop-line-checkout > p {
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 16px;
   line-height: 16px;
   color: #9b9b9b;
 }
 .box-shop-line-checkout > h5 {
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 18px;
   line-height: 18px;
   color: #222222;
 }
 .box-shop-line-checkout > h4 {
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
   color: #222222;
@@ -83,6 +88,7 @@
 .paymentModalTitle {
   margin-left: 20px;
   font-weight: 500;
+  font-family: "Metropolis Medium";
   font-size: 22px;
   line-height: 22px;
 }
@@ -115,6 +121,7 @@
 .paymentModalName {
   font-style: normal;
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 16px;
   line-height: 16px;
 }
@@ -124,7 +131,7 @@
   justify-content: space-between;
 }
 .paymentModalSummaryDetil p {
-  font-family: Metropolis;
+  font-family: "Metropolis Medium";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -133,6 +140,7 @@
 }
 .paymentModalSummaryDetil span {
   font-weight: 600;
+  font-family: "Metropolis SemiBold";
   font-size: 18px;
   line-height: 18px;
   display: flex;

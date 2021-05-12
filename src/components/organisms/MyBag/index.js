@@ -39,7 +39,7 @@ function MyBag() {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Item tidak bisa kurang dari 1",
+      text: "Produk tidak bisa kurang dari 1",
       confirmButtonColor: "#273ac7",
     });
   };
@@ -51,7 +51,7 @@ function MyBag() {
         Swal.fire({
           icon: "success",
           title: "Berhasil",
-          text: "Item berhasil diupdate!",
+          text: "Keranjang berhasil diupdate!",
           confirmButtonColor: "#273ac7",
         }).then(() => {
           axiosApiInstance
@@ -80,7 +80,7 @@ function MyBag() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Tidak ada item yang dipilih",
+        text: "Tidak ada produk yang dipilih",
         confirmButtonColor: "#273ac7",
       });
     } else {
@@ -90,7 +90,7 @@ function MyBag() {
           Swal.fire({
             icon: "success",
             title: "Berhasil",
-            text: "Item berhasil dihapus!",
+            text: "Produk berhasil dihapus dari keranjang!",
             confirmButtonColor: "#273ac7",
           }).then(() => {
             axiosApiInstance
