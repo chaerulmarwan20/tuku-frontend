@@ -28,7 +28,13 @@ export default function ShippingAddress({ func }) {
               setShippingDest(res.data.data);
             })
             .catch((err) => {
-              console.log(err.response);
+              Swal.fire({
+                title: "Error!",
+                text: err.response.data.message,
+                icon: "error",
+                confirmButtonText: "Ok",
+                confirmButtonColor: "#273ac7",
+              });
             });
         });
       })
@@ -41,6 +47,63 @@ export default function ShippingAddress({ func }) {
           confirmButtonColor: "#273ac7",
         });
       });
+  };
+
+  const handleDeleteAddress = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      confirmButtonColor: "#db3022",
+      cancelButtonText: "No, cancel!",
+      cancelButtonColor: "#1EC15F",
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosApiInstance
+          .delete(`${process.env.REACT_APP_API_URL}/address/${id}`)
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Success!",
+              text: res.data.message,
+              confirmButtonColor: "#273ac7",
+            }).then(() => {
+              axiosApiInstance
+                .get(process.env.REACT_APP_API_URL + "/address")
+                .then((res) => {
+                  setShippingDest(res.data.data);
+                })
+                .catch((err) => {
+                  Swal.fire({
+                    title: "Error!",
+                    text: err.response.data.message,
+                    icon: "error",
+                    confirmButtonText: "Ok",
+                    confirmButtonColor: "#273ac7",
+                  });
+                });
+            });
+          })
+          .catch((err) => {
+            Swal.fire({
+              title: "Error!",
+              text: err.response.data.message,
+              icon: "error",
+              confirmButtonColor: "#273ac7",
+            });
+          });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title: "Cancelled!",
+          text: "Your address is safe :)",
+          icon: "info",
+          confirmButtonColor: "#273ac7",
+        });
+      }
+    });
   };
 
   // USE EFFECT
@@ -96,13 +159,22 @@ export default function ShippingAddress({ func }) {
                     Current address{" "}
                   </span>
                 ) : (
-                  <span
-                    className={"hoverThis " + css.changeAddressBtn}
-                    onClick={() => handleChangeAddress(data.id)}
-                  >
-                    {" "}
-                    Choose address{" "}
-                  </span>
+                  <div className="d-flex">
+                    <span
+                      className={"hoverThis mr-3 " + css.changeAddressBtn}
+                      onClick={() => handleChangeAddress(data.id)}
+                    >
+                      {" "}
+                      Choose address{" "}
+                    </span>
+                    <span
+                      className={"hoverThis " + css.deleteAddressBtn}
+                      onClick={() => handleDeleteAddress(data.id)}
+                    >
+                      {" "}
+                      Delete address{" "}
+                    </span>
+                  </div>
                 )}
               </div>
             );

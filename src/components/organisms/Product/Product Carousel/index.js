@@ -22,6 +22,7 @@ function Index({ product }) {
   const dispatch = useDispatch();
   const [count, setcount] = useState(0);
   const [size, setSize] = useState("");
+  const [role, setRole] = useState("");
 
   const [gallery, setGallery] = useState([]);
   const [mainImg, setMainImg] = useState("");
@@ -244,6 +245,23 @@ function Index({ product }) {
     }
   };
 
+  useEffect(() => {
+    axios
+      .get(process.env.REACT_APP_API_URL + "/users/find-one", {
+        headers: {
+          authorization: "Bearer " + localStorage.getItem("token"),
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        const data = res.data.data[0];
+        setRole(data.role);
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
+  }, []);
+
   return (
     <div>
       <div className="productTopContent">
@@ -395,34 +413,36 @@ function Index({ product }) {
                     </div>
                   </div>
                 </div>
-                <div className="prodButtonsBottom">
-                  <div className="prodButtonItem">
-                    <Button
-                      btnClr="transparent"
-                      cls="prodButtonChat"
-                      ftClr="black"
-                      val="Chat"
-                    />
+                {role === 2 && (
+                  <div className="prodButtonsBottom">
+                    <div className="prodButtonItem">
+                      <Button
+                        btnClr="transparent"
+                        cls="prodButtonChat"
+                        ftClr="black"
+                        val="Chat"
+                      />
+                    </div>
+                    <div className="prodButtonItem">
+                      <Button
+                        btnClr="transparent"
+                        cls="prodButtonAddBag"
+                        ftClr="black"
+                        val="Add bag"
+                        func={() => handleAddBag()}
+                      />
+                    </div>
+                    <div className="prodButtonItem">
+                      <Button
+                        btnClr="#273AC7"
+                        cls="prodButtonBuyNow"
+                        ftClr="white"
+                        val="Buy Now"
+                        func={() => handleBuy()}
+                      />
+                    </div>
                   </div>
-                  <div className="prodButtonItem">
-                    <Button
-                      btnClr="transparent"
-                      cls="prodButtonAddBag"
-                      ftClr="black"
-                      val="Add bag"
-                      func={() => handleAddBag()}
-                    />
-                  </div>
-                  <div className="prodButtonItem">
-                    <Button
-                      btnClr="#273AC7"
-                      cls="prodButtonBuyNow"
-                      ftClr="white"
-                      val="Buy Now"
-                      func={() => handleBuy()}
-                    />
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

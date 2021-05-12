@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import css from "./style.module.css";
 import { useHistory } from "react-router";
 // IMAGES
@@ -9,18 +10,26 @@ import { Notification } from "../../../molecules";
 
 export default function RightNav({ func, au, ud }) {
   const history = useHistory();
+  const [role, setRole] = useState(null);
+  useEffect(() => {
+    if (ud !== null) {
+      setRole(ud.role);
+    }
+  }, [ud]);
   return (
     <div className={"displayRow " + css.rightNav}>
       <div></div>
       <div className="displayRow">
-        <img
-          className={"hoverThis " + css.cartLogo}
-          onClick={() => {
-            history.push("/bag");
-          }}
-          src={Cart}
-          alt="Cart"
-        />
+        {role !== null && role !== 1 && (
+          <img
+            className={"hoverThis " + css.cartLogo}
+            onClick={() => {
+              history.push("/bag");
+            }}
+            src={Cart}
+            alt="Cart"
+          />
+        )}
         {ud === null ? (
           <div
             className="displayRow"
@@ -84,7 +93,9 @@ export default function RightNav({ func, au, ud }) {
                       }
                       alt="User"
                     />
-                    <div className={"displayColumn " + css.userProfileNameAndPhone}>
+                    <div
+                      className={"displayColumn " + css.userProfileNameAndPhone}
+                    >
                       <p className={css.userProfileName}>{ud.name}</p>
                       <p className={css.userProfilePhone}>{ud.phoneNumber}</p>
                     </div>

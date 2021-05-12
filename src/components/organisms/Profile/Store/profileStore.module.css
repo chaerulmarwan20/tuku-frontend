@@ -36,6 +36,16 @@
     color: #ffffff;
     padding: 5px 10px;
   }
+  .btnDelete {
+    background-color: #db3022;
+    border-radius: 25px;
+    font-family: Metropolis;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+  }
   .rightSideUserTitle {
     border-bottom: 0.1vw solid #d4d4d4;
   }
@@ -301,6 +311,16 @@
 @media (max-width: 768px) {
   .btnDetail {
     background-color: #273ac7;
+    border-radius: 25px;
+    font-family: Metropolis;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+  }
+  .btnDelete {
+    background-color: #db3022;
     border-radius: 25px;
     font-family: Metropolis;
     font-weight: 500;

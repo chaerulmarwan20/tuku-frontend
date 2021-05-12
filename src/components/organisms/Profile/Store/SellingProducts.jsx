@@ -22,6 +22,7 @@ export default function SellingProducts({
 }) {
   const dummyPhotoArray = [pog[0], pog[1], pog[2], pog[3], pog[4]];
   const [photo, setPhoto] = useState(0);
+  const [category, setCategory] = useState(null);
   const switchPhoto = (ops) => {
     if (ops === "-" && photo > 0) {
       setPhoto(photo - 1);
@@ -34,6 +35,8 @@ export default function SellingProducts({
     title: "",
     price: "",
     stock: "",
+    color: "",
+    size: "",
     description: "",
   });
 
@@ -41,6 +44,10 @@ export default function SellingProducts({
     const dataNew = { ...data };
     dataNew[event.target.name] = event.target.value;
     setData(dataNew);
+  };
+
+  const handleChangeCategory = (params) => {
+    setCategory(params);
   };
 
   const handleJual = () => {
@@ -56,20 +63,33 @@ export default function SellingProducts({
         text: "Masukkan minimal 5 gambar product",
         icon: "error",
         confirmButtonText: "Ok",
-        confirmButtonColor: "#6379F4",
+        confirmButtonColor: "#273ac7",
+      });
+    } else if (
+      data.price === "" ||
+      data.stock === "" ||
+      data.color === "" ||
+      data.size === "" ||
+      category === null
+    ) {
+      Swal.fire({
+        title: "Error!",
+        text: "Isi semua field",
+        icon: "error",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#273ac7",
       });
     } else {
       const formData = new FormData();
+      const arrColor = data.color.split(" ");
+      const arrSize = data.size.split(" ");
       formData.append("title", data.title);
-      formData.append("idCategory", 1);
+      formData.append("idCategory", category);
       formData.append("price", data.price);
       formData.append("conditions", cp === true ? "Baru" : "Bekas");
       formData.append("stock", data.stock);
-      formData.append("size", JSON.stringify(["S", "M", "L", "XL"]));
-      formData.append(
-        "color",
-        JSON.stringify(["#1A1A1A", "#D84242", "#4290D8", "#42D86C"])
-      );
+      formData.append("size", JSON.stringify(arrSize));
+      formData.append("color", JSON.stringify(arrColor));
       formData.append("description", data.description);
       formData.append("image", imgProduct1);
       formData.append("image", imgProduct2);
@@ -146,8 +166,123 @@ export default function SellingProducts({
               type="text"
             />
           </div>
-
-          <div className={"displayColumn"}>
+          <div
+            className={"displayColumn " + css.sellingProductsStock}
+            style={{ transform: "translateY(-30px)" }}
+          >
+            <span className={css.sellingProductsLabel}>Color</span>
+            <Input
+              cls={css.sellingProductsInput}
+              nm="color"
+              onCg={handleFormChange}
+              plcHldr="Masukkan warna barang dalam bahasa inggris"
+              type="text"
+            />
+            <small>
+              Jika lebih dari satu warna, pisahkan dengan karakter spasi
+            </small>
+          </div>
+          <div
+            className={"displayColumn " + css.sellingProductsStock}
+            style={{ transform: "translateY(-60px)" }}
+          >
+            <span className={css.sellingProductsLabel}>Size</span>
+            <Input
+              cls={css.sellingProductsInput}
+              nm="size"
+              onCg={handleFormChange}
+              plcHldr="Masukkan size barang"
+              type="text"
+            />
+            <small>
+              Jika lebih dari satu size, pisahkan dengan karakter spasi
+            </small>
+            <small>XS, S, M... untuk category selain Shoes</small>
+            <small>30, 31, 32... untuk category Shoes</small>
+          </div>
+          <div
+            className={"displayColumn"}
+            style={{ transform: "translateY(-60px)" }}
+          >
+            <span className={css.sellingProductsLabel}>Category</span>
+            <div
+              className={"displayRow " + css.myProfileLeftSideSetupSpaceMobile}
+            >
+              <div className="displayRow">
+                <div
+                  className={"hoverThis " + css.myProfileRadioButton}
+                  onClick={() => handleChangeCategory(1)}
+                >
+                  <div
+                    className={css.myProfileInsideRadioButton}
+                    style={category === 1 ? { background: "#273AC7" } : null}
+                  />
+                </div>
+                <span className={css.myProfileGender}>T-Shirt</span>
+              </div>
+              <div className="displayRow">
+                <div
+                  className={"hoverThis " + css.myProfileRadioButton}
+                  onClick={() => handleChangeCategory(2)}
+                >
+                  <div
+                    className={css.myProfileInsideRadioButton}
+                    style={category === 2 ? { background: "#273AC7" } : null}
+                  />
+                </div>
+                <span className={css.myProfileGender}>Jacket</span>
+              </div>
+            </div>
+          </div>
+          <div
+            className={"displayColumn"}
+            style={{ transform: "translateY(-50px)" }}
+          >
+            <div
+              className={"displayRow " + css.myProfileLeftSideSetupSpaceMobile}
+            >
+              <div className="displayRow">
+                <div
+                  className={"hoverThis " + css.myProfileRadioButton}
+                  onClick={() => handleChangeCategory(3)}
+                >
+                  <div
+                    className={css.myProfileInsideRadioButton}
+                    style={category === 3 ? { background: "#273AC7" } : null}
+                  />
+                </div>
+                <span className={css.myProfileGender}>Pants</span>
+              </div>
+              <div className="displayRow">
+                <div
+                  className={"hoverThis " + css.myProfileRadioButton}
+                  onClick={() => handleChangeCategory(4)}
+                >
+                  <div
+                    className={css.myProfileInsideRadioButton}
+                    style={category === 4 ? { background: "#273AC7" } : null}
+                  />
+                </div>
+                <span className={css.myProfileGender}>Shoes</span>
+              </div>
+              <div className="displayRow">
+                <div
+                  className={"hoverThis " + css.myProfileRadioButton}
+                  onClick={() => handleChangeCategory(5)}
+                >
+                  <div
+                    className={css.myProfileInsideRadioButton}
+                    style={category === 5 ? { background: "#273AC7" } : null}
+                  />
+                </div>
+                <span className={css.myProfileGender}>Shorts</span>
+              </div>
+            </div>
+          </div>
+          <div
+            className={"displayColumn mt-4"}
+            style={{ transform: "translateY(-60px)" }}
+          >
             <span className={css.sellingProductsLabel}>Condition</span>
             <div
               className={"displayRow " + css.myProfileLeftSideSetupSpaceMobile}

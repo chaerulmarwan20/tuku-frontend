@@ -1,33 +1,3 @@
-.modal-body h1.title {
-  font-family: Metropolis;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.modal-body span.number {
-  font-family: Metropolis;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.modal-body span.detail-order {
-  font-family: Metropolis;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 12px;
-  color: #9b9b9b;
-}
-
-.modal-body .detial-container {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 8px rgba(115, 115, 115, 0.25);
-  border-radius: 4px;
-}
-
 .btn-order {
   background-color: #ffffff;
   color: #273ac7;

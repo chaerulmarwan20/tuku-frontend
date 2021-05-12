@@ -17,10 +17,10 @@ export default function Sidebar({ ms, sm, au, ud }) {
           <p className={css.userProfileName}>
             {ud.name.length > 25 ? ud.name.slice(0, 25) + "..." : ud.name}
           </p>
-          <div className="displayRow hoverThis">
+          {/* <div className="displayRow hoverThis">
             <img alt="Pen" className={css.penLogo} src={Pen} />
             <span className={css.userChangeProfileText}>Ubah Profile</span>
-          </div>
+          </div> */}
         </div>
       </div>
       {ud.role === 1 ? (

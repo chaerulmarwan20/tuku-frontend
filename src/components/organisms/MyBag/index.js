@@ -4,6 +4,7 @@ import style from "./mybag.module.css";
 import "./mybag.css";
 import { AiOutlineMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import axiosApiInstance from "../../../helpers/axios";
+import Rupiah from "../../../helpers/rupiah";
 import { Navbar, Filter } from "..";
 import Swal from "sweetalert2";
 
@@ -229,7 +230,7 @@ function MyBag() {
                                   }
                                 />
                                 <p className={style["price"]}>
-                                  Rp.{item.total}
+                                  {Rupiah(item.total)}
                                 </p>
                               </div>
                             </div>
@@ -244,7 +245,7 @@ function MyBag() {
                   <p className={style["shop-summary-teks"]}>Shopping summary</p>
                   <br />
                   <p className={style["total-price"]}>Total Price</p>
-                  <p className={style["price-value"]}>Rp.{total}</p>
+                  <p className={style["price-value"]}>{Rupiah(total)}</p>
                   <br />
                   <button
                     type="button"

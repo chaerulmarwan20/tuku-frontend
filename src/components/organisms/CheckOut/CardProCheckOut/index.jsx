@@ -1,4 +1,5 @@
 import React from "react";
+import Rupiah from "../../../../helpers/rupiah";
 
 import "./style.css";
 
@@ -15,7 +16,7 @@ export default function CardProCheckOut({ cart }) {
           <p>{item.brand}</p>
         </div>
         <div className="card-checkout-sect-3">
-          <h3>Rp.{item.total}</h3>
+          <h3>{Rupiah(item.total)}</h3>
         </div>
       </div>
     );

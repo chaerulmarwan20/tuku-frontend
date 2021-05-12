@@ -3,6 +3,7 @@ import "./style.css";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom";
 import axiosApiInstance from "../../../../helpers/axios";
+import Rupiah from "../../../../helpers/rupiah";
 import { FaTimes } from "react-icons/fa";
 import { Button } from "../../../atoms";
 
@@ -82,16 +83,16 @@ export default function ShoppingSum({ total, address, cart }) {
       <h3>Shopping Summary</h3>
       <div className="box-shop-line-checkout">
         <p>Order</p>
-        <h5>Rp.{total}</h5>
+        <h5>{Rupiah(total)}</h5>
       </div>
       <div className="box-shop-line-checkout">
         <p>Delivery</p>
-        <h5>Rp.{postage}</h5>
+        <h5>{Rupiah(postage)}</h5>
       </div>
       <hr />
       <div className="box-shop-line-checkout">
         <h4>Shopping Summary</h4>
-        <h5>Rp.{payment}</h5>
+        <h5>{Rupiah(payment)}</h5>
       </div>
       <button data-toggle="modal" data-target="#paymentModal">
         Select Payment
@@ -189,7 +190,7 @@ export default function ShoppingSum({ total, address, cart }) {
                           <p>Order</p>
                         </div>
                         <div>
-                          <span>Rp.{total}</span>
+                          <span>{Rupiah(total)}</span>
                         </div>
                       </div>
                       <div className="paymentModalSummaryDetil">
@@ -197,7 +198,7 @@ export default function ShoppingSum({ total, address, cart }) {
                           <p>Delivery</p>
                         </div>
                         <div>
-                          <span>Rp.{postage}</span>
+                          <span>{Rupiah(postage)}</span>
                         </div>
                       </div>
                     </div>
@@ -207,7 +208,7 @@ export default function ShoppingSum({ total, address, cart }) {
                     <div className="paymentModalFooterBody">
                       <div className="paymentSHoppingSUmmary">
                         <p>Shopping summary</p>
-                        <span>Rp.{payment}</span>
+                        <span>{Rupiah(payment)}</span>
                       </div>
                       <div className="paymentModalButton">
                         <Button

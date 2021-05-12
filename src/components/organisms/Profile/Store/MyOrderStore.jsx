@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import css from "./profileStore.module.css";
+import "./profileStore.css";
 // IMAGES
 import Left from "../../../images/left.png";
 import Right from "../../../images/right.png";
@@ -27,7 +28,33 @@ export default function MyOrderUser({ smosd, smosm }) {
   const [myOrder, setMyOrder] = useState([]);
   const [myOrderDetail, setMyOrderDetail] = useState([]);
   const [empty, setEmpty] = useState(false);
-  // SWITCH CAROUSEL BUTTON
+  const [order, setOrder] = useState("ASC");
+  const [sort, setSort] = useState("id");
+  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(null);
+  const [totalPage, setTotalPage] = useState(null);
+  const [limit, setLimit] = useState(5);
+  const [paginate, setPaginate] = useState(1);
+
+  const handleChangeSort = (event) => {
+    setSort(event.target.value);
+  };
+
+  const handleClickOrder = (params) => {
+    setOrder(params);
+  };
+
+  const handleChangeLimit = (event) => {
+    if (page > 1) {
+      setPage(1);
+    }
+    setLimit(event.target.value);
+  };
+
+  const handleClickPaginate = (params) => {
+    setPage(params);
+  };
+
   const switchBtn = (opr) => {
     if (opr === "+") {
       if (buttonOrder < orderButtonRowCarouselMobile.length - 1) {
@@ -64,24 +91,26 @@ export default function MyOrderUser({ smosd, smosm }) {
         setMyOrderDetail(res.data.data);
       })
       .catch((err) => {
-        console.log(err.response.dat.message);
+        console.log(err.response.data.message);
       });
   };
 
-  // USEEFFECT
   useEffect(() => {
     axiosApiInstance
       .get(
-        `${process.env.REACT_APP_API_URL}/store/order?perPage=10&status=${status}`
+        `${process.env.REACT_APP_API_URL}/store/order?order=${order}&sortBy=${sort}&page=${page}&perPage=${limit}&status=${status}`
       )
       .then((res) => {
+        setCurrentPage(res.data.currentPage);
+        setTotalPage(res.data.totalPage);
+        setPaginate(res.data.totalPage < 6 ? res.data.totalPage : 5);
         setEmpty(false);
         setMyOrder(res.data.data);
       })
       .catch((err) => {
         setEmpty(true);
       });
-  }, [status]);
+  }, [order, sort, page, limit, status]);
 
   return (
     <>
@@ -176,12 +205,9 @@ export default function MyOrderUser({ smosd, smosm }) {
           </div>
         </div>
         <div className={"displayColumn " + css.rightSideMyOrderDataShow}>
-          <div
-            className="myOrderDataShowObjek"
-            style={{ display: "flex", justifyContent: "start" }}
-          >
+          <div className="myOrderDataShowObjek">
             {empty === false && (
-              <table className="table table-responsive-sm text-center">
+              <table className="table table-responsive text-center">
                 <thead>
                   <tr>
                     <th>No</th>
@@ -197,7 +223,9 @@ export default function MyOrderUser({ smosd, smosm }) {
                   {myOrder.map((item, index) => {
                     return (
                       <tr key={index}>
-                        <td className="align-middle">{index + 1}.</td>
+                        <td className="align-middle">
+                          {index + 1 * (limit * page) - (limit - 1)}.
+                        </td>
                         <td className="align-middle">{item.name}</td>
                         <td className="align-middle">{item.address}</td>
                         <td className="align-middle">{Rupiah(item.total)}</td>
@@ -243,7 +271,94 @@ export default function MyOrderUser({ smosd, smosm }) {
               </table>
             )}
             {empty === true && (
-              <img alt="No Order" className={css.noOrderImg} src={NoOrder} />
+              <div className="w-100 text-center">
+                <img alt="No Order" className={css.noOrderImg} src={NoOrder} />
+              </div>
+            )}
+            {empty === false && (
+              <>
+                <div className="d-flex justify-content-center">
+                  <ul className="pagination-custom">
+                    {Array.from(Array(paginate).keys()).map((data, index) => {
+                      return (
+                        <li key={index}>
+                          <button
+                            className={`${
+                              currentPage >= 5 && currentPage < totalPage
+                                ? data + (currentPage - 3) === currentPage &&
+                                  "page-active"
+                                : currentPage >= 5 && currentPage === totalPage
+                                ? data + (currentPage - 3) - 1 ===
+                                    currentPage && "page-active"
+                                : data + 1 === currentPage && "page-active"
+                            }`}
+                            onClick={() =>
+                              handleClickPaginate(
+                                `${
+                                  currentPage >= 5 && currentPage < totalPage
+                                    ? data + (currentPage - 3)
+                                    : currentPage >= 5 &&
+                                      currentPage === totalPage
+                                    ? data + (currentPage - 3) - 1
+                                    : data + 1
+                                }`
+                              )
+                            }
+                          >
+                            {currentPage >= 5 && currentPage < totalPage
+                              ? data + (currentPage - 3)
+                              : currentPage >= 5 && currentPage === totalPage
+                              ? data + (currentPage - 3) - 1
+                              : data + 1}
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <div className="d-flex flex-column flex-xl-row justify-content-md-center align-items-center mt-1">
+                  <div className="btn-container d-flex">
+                    <button
+                      type="button"
+                      className={`btn btn-order mr-3 d-flex justify-content-center align-items-center ${
+                        order === "ASC" ? "active" : ""
+                      }`}
+                      onClick={() => handleClickOrder("ASC")}
+                    >
+                      Ascending
+                    </button>
+                    <button
+                      type="button"
+                      className={`btn btn-order mr-3 d-flex justify-content-center align-items-center ${
+                        order === "DESC" ? "active" : ""
+                      }`}
+                      onClick={() => handleClickOrder("DESC")}
+                    >
+                      Descending
+                    </button>
+                  </div>
+                  <div className="select-container d-flex flex-column flex-md-row mt-3 mt-xl-0">
+                    <select
+                      className="custom-select mr-3"
+                      onChange={handleChangeSort}
+                    >
+                      <option value="id">Sort by Id</option>
+                      <option value="name">Sort by name</option>
+                      <option value="total">Sort by total</option>
+                      <option value="paymentMethod">Sort by payment</option>
+                      <option value="status">Sort by status</option>
+                    </select>
+                    <select
+                      className="custom-select mt-3 mt-md-0"
+                      onChange={handleChangeLimit}
+                    >
+                      <option value="5">Limit 5</option>
+                      <option value="10">Limit 10</option>
+                      <option value="15">Limit 15</option>
+                    </select>
+                  </div>
+                </div>
+              </>
             )}
           </div>
         </div>

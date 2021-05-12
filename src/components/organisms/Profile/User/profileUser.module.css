@@ -95,7 +95,8 @@
     padding: 1.5vw;
   }
   .changeAddressPeopleName,
-  .changeAddressBtn {
+  .changeAddressBtn,
+  .deleteAddressBtn {
     font-size: 1vw;
     font-weight: bold;
   }
@@ -105,6 +106,9 @@
   }
   .changeAddressBtn {
     color: #273ac7;
+  }
+  .deleteAddressBtn {
+    color: #db3022;
   }
   /* ADD NEW ADDRESS */
   .addNewAddress {
