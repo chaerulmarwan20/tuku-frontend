@@ -83,6 +83,7 @@ export default function MyProducts({ smpmd, smpmm }) {
   const searchProduct = (event) => {
     setQuery(event.target.value);
     setMpms("All items");
+    setPage(1);
     setStatus("");
     axiosApiInstance
       .get(
