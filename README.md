@@ -99,7 +99,7 @@ $ npm start
 
 ![category-mockup](https://user-images.githubusercontent.com/74039235/117530743-147f1880-b009-11eb-8c05-3557a42ebe98.jpg)
 
-- Product Details
+- Product Detail
 
 ![product-details-mockup](https://user-images.githubusercontent.com/74039235/117561786-13f78800-b0c4-11eb-931a-320987705051.jpg)
 
