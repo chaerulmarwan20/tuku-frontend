@@ -11,6 +11,7 @@
 - [Prerequisites](#prerequisites)
 - [Endpoint](#endpoint)
 - [Installation](#installation)
+- [Screenshots](#screenshots)
 - [Related Project](#related-project)
 
 ## Introduction
