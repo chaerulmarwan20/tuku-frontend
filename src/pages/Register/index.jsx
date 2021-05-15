@@ -33,7 +33,8 @@ export default function Register() {
     validate = {
       name: Yup.string().min(3, "Mininum 3 characters").required("Required!"),
       email: Yup.string().email("Invalid email format").required("Required!"),
-      phoneNumber: Yup.string()
+      phoneNumber: Yup.number()
+        .typeError("Invalid phone number")
         .min(11, "Mininum 11 characters")
         .required("Required!"),
       store: Yup.string().min(3, "Mininum 3 characters").required("Required!"),
