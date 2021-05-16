@@ -68,14 +68,32 @@ function MyBag() {
         Swal.fire({
           icon: "success",
           title: "Berhasil",
-          text: "Keranjang berhasil diupdate!",
+          text: "Keranjang berhasil diubah",
           confirmButtonColor: "#273ac7",
         }).then(() => {
           axiosApiInstance
             .get(`${urlApi}/cart`)
             .then((res) => {
               const newProduct = res.data.data;
-              setProduct(newProduct);
+              setEmpty(false);
+              setProduct(
+                newProduct.map((item) => {
+                  return {
+                    select: false,
+                    id: item.id,
+                    idProduct: item.idProduct,
+                    idStore: item.idStore,
+                    color: item.color,
+                    price: item.price,
+                    qty: item.qty,
+                    size: item.size,
+                    title: item.title,
+                    total: item.total,
+                    brand: item.brand,
+                    image: item.image,
+                  };
+                })
+              );
             })
             .catch((err) => {
               setEmpty(true);
@@ -123,10 +141,9 @@ function MyBag() {
             .delete(`${urlApi}/cart`, { data: { cart: arrayids } })
             .then((res) => {
               Swal.fire({
-                title: "Success!",
-                text: res.data.message,
                 icon: "success",
-                confirmButtonText: "Ok",
+                title: "Berhasil",
+                text: "Produk berhasil dihapus dari keranjang",
                 confirmButtonColor: "#273ac7",
               }).then(() => {
                 setCount(0);
@@ -161,10 +178,9 @@ function MyBag() {
             })
             .catch((err) =>
               Swal.fire({
-                title: "Error!",
-                text: err.response.data.message,
                 icon: "error",
-                confirmButtonText: "Ok",
+                title: "Oops...",
+                text: err.response.data.message,
                 confirmButtonColor: "#273ac7",
               })
             );

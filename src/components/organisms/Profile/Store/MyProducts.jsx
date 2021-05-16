@@ -186,6 +186,119 @@ export default function MyProducts({ smpmd, smpmm }) {
     });
   };
 
+  const handleClickArchive = (id) => {
+    Swal.fire({
+      title: "Apakah kamu yakin?",
+      text: "Produk kamu akan diarsipkan!",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Ya, arsipkan!",
+      confirmButtonColor: "#db3022",
+      cancelButtonText: "Tidak, batalkan!",
+      cancelButtonColor: "#1EC15F",
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosApiInstance
+          .put(`${process.env.REACT_APP_API_URL}/product/${id}`)
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Berhasil!",
+              text: "Produk berhasil diarsipkan",
+              confirmButtonColor: "#273ac7",
+            }).then(() => {
+              axiosApiInstance
+                .get(`${process.env.REACT_APP_API_URL}/store/product`)
+                .then((res) => {
+                  setEmpty(false);
+                  setProduct(res.data.data);
+                })
+                .catch((err) => {
+                  setEmpty(true);
+                });
+            });
+          })
+          .catch((err) => {
+            if (err.response.data.message === "Produk telah diarsipkan") {
+              Swal.fire({
+                title: "Info!",
+                text: err.response.data.message,
+                icon: "info",
+                confirmButtonColor: "#273ac7",
+              });
+            } else {
+              Swal.fire({
+                title: "Error!",
+                text: err.response.data.message,
+                icon: "error",
+                confirmButtonColor: "#273ac7",
+              });
+            }
+          });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title: "Dibatalkan!",
+          text: "Produk batal diarsipkan :)",
+          icon: "info",
+          confirmButtonColor: "#273ac7",
+        });
+      }
+    });
+  };
+
+  const handleClickUnarchive = (id) => {
+    Swal.fire({
+      title: "Apakah kamu yakin?",
+      text: "Produk kamu akan dibatalkan dari pengarsipan!",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Ya, arsipkan!",
+      confirmButtonColor: "#db3022",
+      cancelButtonText: "Tidak, batalkan!",
+      cancelButtonColor: "#1EC15F",
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosApiInstance
+          .put(`${process.env.REACT_APP_API_URL}/product/unarchive/${id}`)
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Berhasil!",
+              text: "Pembatalan pengarsipan produk berhasil",
+              confirmButtonColor: "#273ac7",
+            }).then(() => {
+              axiosApiInstance
+                .get(`${process.env.REACT_APP_API_URL}/store/product`)
+                .then((res) => {
+                  setEmpty(false);
+                  setProduct(res.data.data);
+                })
+                .catch((err) => {
+                  setEmpty(true);
+                });
+            });
+          })
+          .catch((err) => {
+            Swal.fire({
+              title: "Error!",
+              text: err.response.data.message,
+              icon: "error",
+              confirmButtonColor: "#273ac7",
+            });
+          });
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire({
+          title: "Dibatalkan!",
+          text: "Produk masih berada di pengarsipan :)",
+          icon: "info",
+          confirmButtonColor: "#273ac7",
+        });
+      }
+    });
+  };
+
   useEffect(() => {
     if (status === "") {
       axiosApiInstance
@@ -516,12 +629,31 @@ export default function MyProducts({ smpmd, smpmm }) {
                       <li className="list-group-item">
                         <button
                           type="button"
-                          className={css.btnDelete}
+                          className={"mr-2 " + css.btnDelete}
                           data-dismiss="modal"
                           onClick={() => handleClickDelete(item.id)}
                         >
-                          Delete this product
+                          Delete
                         </button>
+                        {item.isArchived === 1 ? (
+                          <button
+                            type="button"
+                            className={css.btnArchive}
+                            data-dismiss="modal"
+                            onClick={() => handleClickUnarchive(item.id)}
+                          >
+                            Unarchive
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            className={css.btnArchive}
+                            data-dismiss="modal"
+                            onClick={() => handleClickArchive(item.id)}
+                          >
+                            Archive
+                          </button>
+                        )}
                       </li>
                     </div>
                   );
