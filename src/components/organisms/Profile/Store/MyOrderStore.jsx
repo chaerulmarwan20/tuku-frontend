@@ -347,7 +347,7 @@ export default function MyOrderUser({ smosd, smosm }) {
                       className="custom-select mr-3"
                       onChange={handleChangeSort}
                     >
-                      <option value="id">Sort by Id</option>
+                      <option value="id">Sort by id</option>
                       <option value="name">Sort by name</option>
                       <option value="total">Sort by total</option>
                       <option value="paymentMethod">Sort by payment</option>

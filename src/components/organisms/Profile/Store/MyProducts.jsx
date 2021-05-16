@@ -447,7 +447,7 @@ export default function MyProducts({ smpmd, smpmm }) {
                         className="custom-select mr-3"
                         onChange={handleChangeSort}
                       >
-                        <option value="id">Sort by Id</option>
+                        <option value="id">Sort by id</option>
                         <option value="title">Sort by name</option>
                         <option value="category">Sort by category</option>
                         <option value="price">Sort by price</option>

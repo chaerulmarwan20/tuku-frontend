@@ -15,7 +15,6 @@ function MyBag() {
   const [product, setProduct] = useState([]);
   const [filter, showFilter] = useState(false);
   let total = 0;
-  const [checked] = useState([]);
   const [count, setCount] = useState(0);
   const [empty, setEmpty] = useState(false);
 
@@ -179,17 +178,6 @@ function MyBag() {
         });
       }
     });
-  };
-
-  const handleChecked = (id) => {
-    if (checked.includes(id) === false) {
-      checked.push(id);
-      setCount(count + 1);
-    } else {
-      const check = checked.indexOf(id);
-      setCount(count - 1);
-      checked.splice(check, 1);
-    }
   };
 
   product.map((item, index) => {
