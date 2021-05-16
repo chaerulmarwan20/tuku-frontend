@@ -24,7 +24,25 @@ function MyBag() {
       .get(`${urlApi}/cart`)
       .then((res) => {
         const newProduct = res.data.data;
-        setProduct(newProduct);
+        setEmpty(false);
+        setProduct(
+          newProduct.map((item) => {
+            return {
+              select: false,
+              id: item.id,
+              idProduct: item.idProduct,
+              idStore: item.idStore,
+              color: item.color,
+              price: item.price,
+              qty: item.qty,
+              size: item.size,
+              title: item.title,
+              total: item.total,
+              brand: item.brand,
+              image: item.image,
+            };
+          })
+        );
       })
       .catch((err) => {
         setEmpty(true);
@@ -76,43 +94,91 @@ function MyBag() {
   };
 
   const deleteCart = () => {
-    if (checked.length < 1) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Tidak ada produk yang dipilih",
-        confirmButtonColor: "#273ac7",
-      });
-    } else {
-      axiosApiInstance
-        .delete(`${urlApi}/cart`, { data: { cart: checked } })
-        .then((res) => {
-          Swal.fire({
-            icon: "success",
-            title: "Berhasil",
-            text: "Produk berhasil dihapus dari keranjang!",
-            confirmButtonColor: "#273ac7",
-          }).then(() => {
-            axiosApiInstance
-              .get(`${urlApi}/cart`)
-              .then((res) => {
-                const newProduct = res.data.data;
-                setProduct(newProduct);
-              })
-              .catch((err) => {
-                setEmpty(true);
-              });
-          });
-        })
-        .catch((err) => {
+    Swal.fire({
+      title: "Apakah kamu yakin?",
+      text: "Kamu tidak akan dapat mengembalikan ini!",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Ya, hapus!",
+      confirmButtonColor: "#db3022",
+      cancelButtonText: "Tidak, batalkan!",
+      cancelButtonColor: "#1EC15F",
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        let arrayids = [];
+        product.forEach((d) => {
+          if (d.select) {
+            arrayids.push(d.id);
+          }
+        });
+        if (arrayids.length < 1) {
           Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: err.response.data.message,
+            text: "Tidak ada produk yang dipilih",
             confirmButtonColor: "#273ac7",
           });
+        } else {
+          axiosApiInstance
+            .delete(`${urlApi}/cart`, { data: { cart: arrayids } })
+            .then((res) => {
+              Swal.fire({
+                title: "Success!",
+                text: res.data.message,
+                icon: "success",
+                confirmButtonText: "Ok",
+                confirmButtonColor: "#273ac7",
+              }).then(() => {
+                setCount(0);
+                axiosApiInstance
+                  .get(`${urlApi}/cart`)
+                  .then((res) => {
+                    const newProduct = res.data.data;
+                    setEmpty(false);
+                    setProduct(
+                      newProduct.map((item) => {
+                        return {
+                          select: false,
+                          id: item.id,
+                          idProduct: item.idProduct,
+                          idStore: item.idStore,
+                          color: item.color,
+                          price: item.price,
+                          qty: item.qty,
+                          size: item.size,
+                          title: item.title,
+                          total: item.total,
+                          brand: item.brand,
+                          image: item.image,
+                        };
+                      })
+                    );
+                  })
+                  .catch((err) => {
+                    setEmpty(true);
+                  });
+              });
+            })
+            .catch((err) =>
+              Swal.fire({
+                title: "Error!",
+                text: err.response.data.message,
+                icon: "error",
+                confirmButtonText: "Ok",
+                confirmButtonColor: "#273ac7",
+              })
+            );
+        }
+      } else {
+        Swal.fire({
+          title: "Dibatalkan!",
+          text: "Keranjang kamu aman :)",
+          icon: "info",
+          confirmButtonColor: "#273ac7",
         });
-    }
+      }
+    });
   };
 
   const handleChecked = (id) => {
@@ -152,14 +218,32 @@ function MyBag() {
               <div className="col-lg">
                 <div className="container-checkbox d-flex p-4 justify-content-between">
                   <div className="pl-3">
-                    {/* <input
+                    <input
                       className="form-check-input"
                       type="checkbox"
-                      value=""
                       id="defaultCheck1"
                       style={{ width: "20px" }}
-                    /> */}
-                    <label className="form-check-label" for="defaultCheck1">
+                      checked={product.length === count ? true : false}
+                      onChange={(e) => {
+                        let checked = e.target.checked;
+                        setProduct(
+                          product.map((item) => {
+                            item.select = checked;
+                            if (count === product.length) {
+                              setCount(0);
+                            } else {
+                              setCount(count + product.length);
+                            }
+                            return item;
+                          })
+                        );
+                      }}
+                    />
+                    <label
+                      className="form-check-label"
+                      for="defaultCheck1"
+                      style={{ marginLeft: "10px" }}
+                    >
                       {count} items selected
                     </label>
                   </div>
@@ -181,7 +265,23 @@ function MyBag() {
                                 >
                                   <input
                                     type="checkbox"
-                                    onChange={() => handleChecked(item.id)}
+                                    checked={item.select}
+                                    onChange={(e) => {
+                                      let checked = e.target.checked;
+                                      setProduct(
+                                        product.map((data) => {
+                                          if (item.id === data.id) {
+                                            data.select = checked;
+                                            if (item.select) {
+                                              setCount(count + 1);
+                                            } else {
+                                              setCount(count - 1);
+                                            }
+                                          }
+                                          return data;
+                                        })
+                                      );
+                                    }}
                                   />
                                   <img
                                     className={style["item-selected"]}
