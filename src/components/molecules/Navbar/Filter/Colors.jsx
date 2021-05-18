@@ -15,8 +15,8 @@ export default function Colors({ col }) {
     "#B0E0E6",
     "#87CEEB",
     "#4682B4",
-    "black",
-    "white",
+    "#000000",
+    "#FFFFFF",
     "#FFFACD",
     "#F0E68C",
     "#FFD700",
@@ -76,7 +76,7 @@ export default function Colors({ col }) {
             <Button
               btnClr={item}
               cls={
-                item === "white"
+                item === "#FFFFFF"
                   ? "hoverThis " + css.whiteColorBtn
                   : "hoverThis " + css.colorBtn
               }

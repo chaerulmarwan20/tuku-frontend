@@ -20,6 +20,59 @@ export default function SellingProducts({
   imgProduct4,
   imgProduct5,
 }) {
+  // FUNGSIONAL - AVAILABLE COLOR (BUTTON & CAROUSEL)
+  const colorArray = [
+    "#FFB6C1",
+    "#F08080",
+    "#CD5C5C",
+    "#B0E0E6",
+    "#87CEEB",
+    "#4682B4",
+    "#000000",
+    "#FFFFFF",
+    "#FFFACD",
+    "#F0E68C",
+    "#FFD700",
+    "#90EE90",
+    "#3CB371",
+    "#2E8B57",
+  ];
+  const [colorStartPoint, setStartingColor] = useState(0);
+  const [colorEndPoint, setEndingColor] = useState(6);
+  const colorLeftArrow = () => {
+    if (colorStartPoint > 0) {
+      setStartingColor(colorStartPoint - 1);
+      setEndingColor(colorEndPoint - 1);
+    }
+  };
+  const colorRightArrow = () => {
+    if (colorEndPoint < colorArray.length) {
+      setStartingColor(colorStartPoint + 1);
+      setEndingColor(colorEndPoint + 1);
+    }
+  };
+  // FUNGSIONAL - AVAILABLE SIZE (BUTTON & CAROUSEL)
+  const sizeAlphabetArray = ["XS", "S", "M", "L", "XL"];
+  const sizeNumericArray = [
+    27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45,
+    46, 47, 48, 49, 50, 51, 52,
+  ];
+  // ARROW FUNCTION
+  const [sizeStartPoint, setStartingSize] = useState(0);
+  const [sizeEndPoint, setEndingSize] = useState(5);
+  const sizeLeftArrow = () => {
+    if (sizeStartPoint > 0) {
+      setStartingSize(sizeStartPoint - 1);
+      setEndingSize(sizeEndPoint - 1);
+    }
+  };
+  const sizeRightArrow = () => {
+    if (sizeEndPoint < sizeNumericArray.length) {
+      setStartingSize(sizeStartPoint + 1);
+      setEndingSize(sizeEndPoint + 1);
+    }
+  };
+  // BASE CONF - SELLING PRODUCTS
   const dummyPhotoArray = [pog[0], pog[1], pog[2], pog[3], pog[4]];
   const [photo, setPhoto] = useState(0);
   const [category, setCategory] = useState(null);
@@ -48,8 +101,36 @@ export default function SellingProducts({
 
   const handleChangeCategory = (params) => {
     setCategory(params);
+    selectSize([]);
   };
-
+  // FUNGSIONAL - ONCLICK ADD/REMOVE COLOR & SIZE FROM ARRAY
+  const [selectedColor, selectColor] = useState([]);
+  const [selectedSize, selectSize] = useState([]);
+  const clickColor = (color) => {
+    const checkColor = selectedColor.includes(color);
+    // KALO WARNA UDAH ADA, DI HAPUS JADI GAK ADA
+    if(checkColor === true) { 
+      const filterColor = selectedColor.filter(e => e !== color);
+      selectColor(filterColor);
+    }
+    // TAPI KALO WARNA BELOM ADA, TAMBAHIN AJA LANGSUNG
+    else if(checkColor === false) { 
+      selectColor(selectedColor => [...selectedColor, color]);
+    }
+  }
+  const clickSize = (size) => {
+    const checkSize = selectedSize.includes(size);
+    // KALO UKURAN UDAH ADA, DI HAPUS JADI GAK ADA
+    if(checkSize === true) { 
+      const filterSize = selectedSize.filter(e => e !== size);
+      selectSize(filterSize);
+    }
+    // TAPI KALO UKURAN BELOM ADA, TAMBAHIN AJA LANGSUNG
+    else if(checkSize === false) { 
+      selectSize(selectedSize => [...selectedSize, size]);
+    }
+  }
+  // FUNGSIONAL - KALO TOMBOL JUAL DI PENCET?
   const handleJual = () => {
     if (
       imgProduct1 === null ||
@@ -68,8 +149,8 @@ export default function SellingProducts({
     } else if (
       data.price === "" ||
       data.stock === "" ||
-      data.color === "" ||
-      data.size === "" ||
+      selectedColor.length === 0 ||
+      selectedSize.length === 0 ||
       category === null
     ) {
       Swal.fire({
@@ -81,15 +162,13 @@ export default function SellingProducts({
       });
     } else {
       const formData = new FormData();
-      const arrColor = data.color.split(" ");
-      const arrSize = data.size.split(" ");
       formData.append("title", data.title);
       formData.append("idCategory", category);
       formData.append("price", data.price);
       formData.append("conditions", cp === true ? "Baru" : "Bekas");
       formData.append("stock", data.stock);
-      formData.append("size", JSON.stringify(arrSize));
-      formData.append("color", JSON.stringify(arrColor));
+      formData.append("size", JSON.stringify(selectedSize));
+      formData.append("color", JSON.stringify(selectedColor));
       formData.append("description", data.description);
       formData.append("image", imgProduct1);
       formData.append("image", imgProduct2);
@@ -127,7 +206,6 @@ export default function SellingProducts({
         });
     }
   };
-
   return (
     <div className={"displayColumn " + css.sellingProducts}>
       <div className={"displayColumn " + css.insideSellingProducts}>
@@ -156,7 +234,7 @@ export default function SellingProducts({
               type="text"
             />
           </div>
-          <div className={"displayColumn " + css.sellingProductsStock}>
+          <div className={"displayColumn " + css.sellingProductsGap}>
             <span className={css.sellingProductsLabel}>Stock</span>
             <Input
               cls={css.sellingProductsInput}
@@ -167,121 +245,167 @@ export default function SellingProducts({
             />
           </div>
           <div
-            className={"displayColumn " + css.sellingProductsStock}
-            style={{ transform: "translateY(-30px)" }}
+            className={"displayColumn " + css.sellingProductsGap}
           >
             <span className={css.sellingProductsLabel}>Color</span>
-            <Input
-              cls={css.sellingProductsInput}
-              nm="color"
-              onCg={handleFormChange}
-              plcHldr="Masukkan warna barang dalam bahasa inggris"
-              type="text"
-            />
-            <small>
-              Jika lebih dari satu warna, pisahkan dengan karakter spasi
-            </small>
+            <div
+              className={
+                "displayRow " + css.filterOption + " " + css.filterColorOption
+              }
+            >
+              {colorArray.length < 8 ? null : colorStartPoint === 0 ? (
+                <img
+                  className={css.filterArrowLeft}
+                  src={Left}
+                  style={{ opacity: "0.11" }}
+                  alt="Left"
+                />
+              ) : (
+                <img
+                  className={"hoverThis " + css.filterArrowLeft}
+                  onClick={() => {
+                    colorLeftArrow();
+                  }}
+                  src={Left}
+                  alt="Left"
+                />
+              )}
+              {colorArray.slice(colorStartPoint, colorEndPoint).map((item) => (
+                <div
+                  className={
+                    selectedColor.includes(item) === true ? css.colorBorderActive : css.colorBtnBorder
+                  }
+                  color={item}
+                  onClick={ () => { clickColor(item) } }
+                >
+                  <Button
+                    btnClr={item}
+                    cls={
+                      item === "#FFFFFF"
+                        ? "hoverThis " + css.whiteColorBtn
+                        : "hoverThis " + css.colorBtn
+                    }
+                  />
+                </div>
+              ))}
+              {colorArray.length < 8 ? null : colorStartPoint === 8 ? (
+                <img
+                  className={css.filterArrowRight}
+                  src={Right}
+                  style={{ opacity: "0.11" }}
+                  alt="Right"
+                />
+              ) : (
+                <img
+                  className={"hoverThis " + css.filterArrowRight}
+                  onClick={() => {
+                    colorRightArrow();
+                  }}
+                  src={Right}
+                  alt="Right"
+                />
+              )}
+            </div>
           </div>
           <div
-            className={"displayColumn " + css.sellingProductsStock}
-            style={{ transform: "translateY(-60px)" }}
+            className={"displayColumn " + css.sellingProductsGap}
           >
             <span className={css.sellingProductsLabel}>Size</span>
-            <Input
-              cls={css.sellingProductsInput}
-              nm="size"
-              onCg={handleFormChange}
-              plcHldr="Masukkan size barang"
-              type="text"
-            />
-            <small>
-              Jika lebih dari satu size, pisahkan dengan karakter spasi
-            </small>
-            <small>XS, S, M... untuk category selain Shoes</small>
-            <small>30, 31, 32... untuk category Shoes</small>
+            <div className={"displayRow " + css.filterOption}>
+              {category === 4 ? (
+                <div className={"displayRow"}>
+                  {sizeNumericArray.length < 5 ? null : sizeStartPoint === 0 ? (
+                    <img
+                      className={css.filterArrowLeft}
+                      src={Left}
+                      style={{ opacity: "0.11" }}
+                      alt="Left"
+                    />
+                  ) : (
+                    <img
+                      className={"hoverThis " + css.filterArrowLeft}
+                      onClick={() => {
+                        sizeLeftArrow();
+                      }}
+                      src={Left}
+                      alt="Left"
+                    />
+                  )}
+                  {sizeNumericArray.slice(sizeStartPoint, sizeEndPoint).map((item) => (
+                    <Button
+                      cls={
+                        selectedSize.includes(item) === true
+                          ? "hoverThis " + css.sizeBtn + " " + css.selectSize
+                          : "hoverThis " + css.sizeBtn + " " + css.unselectSize
+                      }
+                      func={ () => { clickSize(item) } }
+                      val={item}
+                    />
+                  ))}
+                  {sizeNumericArray.length < 5 ? null : sizeStartPoint === 21 ? (
+                    <img
+                      className={css.filterArrowRight}
+                      src={Right}
+                      style={{ opacity: "0.11" }}
+                      alt="Right"
+                    />
+                  ) : (
+                    <img
+                      className={"hoverThis " + css.filterArrowRight}
+                      onClick={() => {
+                        sizeRightArrow();
+                      }}
+                      src={Right}
+                      alt="Right"
+                    />
+                  )}
+                </div>
+              ) : (
+                sizeAlphabetArray.map((item) => (
+                  <Button
+                    cls={
+                      selectedSize.includes(item) === true
+                        ? "hoverThis " + css.sizeBtn + " " + css.selectSize
+                        : "hoverThis " + css.sizeBtn + " " + css.unselectSize
+                    }
+                    func={ () => { clickSize(item) } }
+                    val={item}
+                  />
+                ))
+              )}
+            </div>
           </div>
           <div
-            className={"displayColumn"}
-            style={{ transform: "translateY(-60px)" }}
+            className={"displayColumn "  + css.sellingProductsGap}
           >
             <span className={css.sellingProductsLabel}>Category</span>
-            <div
-              className={"displayRow " + css.myProfileLeftSideSetupSpaceMobile}
-            >
-              <div className="displayRow">
-                <div
-                  className={"hoverThis " + css.myProfileRadioButton}
-                  onClick={() => handleChangeCategory(1)}
-                >
-                  <div
-                    className={css.myProfileInsideRadioButton}
-                    style={category === 1 ? { background: "#273AC7" } : null}
-                  />
-                </div>
-                <span className={css.myProfileGender}>T-Shirt</span>
-              </div>
-              <div className="displayRow">
-                <div
-                  className={"hoverThis " + css.myProfileRadioButton}
-                  onClick={() => handleChangeCategory(2)}
-                >
-                  <div
-                    className={css.myProfileInsideRadioButton}
-                    style={category === 2 ? { background: "#273AC7" } : null}
-                  />
-                </div>
-                <span className={css.myProfileGender}>Jacket</span>
+            <div className="dropdown">
+              <button className={"btn btn-secondary displayRow dropdown-toggle " + css.sellingProductsCategoryBtn} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {
+                category === 1 ? "T-Shirt" 
+                :
+                category === 2 ? "Jacket" 
+                :
+                category === 3 ? "Pants" 
+                :
+                category === 4 ? "Shoes" 
+                :
+                category === 5 ? "Shorts" 
+                :
+                "Select"
+                }
+              </button>
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <span className="dropdown-item hoverThis" onClick={ () => { handleChangeCategory(1) } }>T-Shirt</span>
+                <span className="dropdown-item hoverThis" onClick={ () => { handleChangeCategory(2) } }>Jacket</span>
+                <span className="dropdown-item hoverThis" onClick={ () => { handleChangeCategory(3) } }>Pants</span>
+                <span className="dropdown-item hoverThis" onClick={ () => { handleChangeCategory(4) } }>Shoes</span>
+                <span className="dropdown-item hoverThis" onClick={ () => { handleChangeCategory(5) } }>Shorts</span>
               </div>
             </div>
           </div>
           <div
-            className={"displayColumn"}
-            style={{ transform: "translateY(-50px)" }}
-          >
-            <div
-              className={"displayRow " + css.myProfileLeftSideSetupSpaceMobile}
-            >
-              <div className="displayRow">
-                <div
-                  className={"hoverThis " + css.myProfileRadioButton}
-                  onClick={() => handleChangeCategory(3)}
-                >
-                  <div
-                    className={css.myProfileInsideRadioButton}
-                    style={category === 3 ? { background: "#273AC7" } : null}
-                  />
-                </div>
-                <span className={css.myProfileGender}>Pants</span>
-              </div>
-              <div className="displayRow">
-                <div
-                  className={"hoverThis " + css.myProfileRadioButton}
-                  onClick={() => handleChangeCategory(4)}
-                >
-                  <div
-                    className={css.myProfileInsideRadioButton}
-                    style={category === 4 ? { background: "#273AC7" } : null}
-                  />
-                </div>
-                <span className={css.myProfileGender}>Shoes</span>
-              </div>
-              <div className="displayRow">
-                <div
-                  className={"hoverThis " + css.myProfileRadioButton}
-                  onClick={() => handleChangeCategory(5)}
-                >
-                  <div
-                    className={css.myProfileInsideRadioButton}
-                    style={category === 5 ? { background: "#273AC7" } : null}
-                  />
-                </div>
-                <span className={css.myProfileGender}>Shorts</span>
-              </div>
-            </div>
-          </div>
-          <div
-            className={"displayColumn mt-4"}
-            style={{ transform: "translateY(-60px)" }}
+            className={"displayColumn mt-4 " + css.sellingProductsGap + " " + css.sellingProductsCondition}
           >
             <span className={css.sellingProductsLabel}>Condition</span>
             <div
@@ -437,13 +561,15 @@ export default function SellingProducts({
           />
         </div>
       </div>
-      <Button
-        btnClr="#273AC7"
-        cls={css.sellBtn}
-        ftClr="white"
-        val="Jual"
-        func={handleJual}
-      />
+      <div>
+          <Button
+            btnClr="#273AC7"
+            cls={css.sellBtn}
+            ftClr="white"
+            val="Jual"
+            func={handleJual}
+          />
+      </div>
     </div>
   );
 }

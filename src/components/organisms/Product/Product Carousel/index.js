@@ -263,7 +263,7 @@ function Index({ product }) {
                 {gallery.map((item) => {
                   return (
                     <div
-                      className="productTriggerImageItem"
+                      className="hoverThis productTriggerImageItem"
                       key={item.id}
                       onClick={() => {
                         handleType("PX28");

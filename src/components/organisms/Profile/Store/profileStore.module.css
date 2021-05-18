@@ -252,12 +252,8 @@
     font-weight: 700;
     padding: 2vw;
   }
-  .sellingProductsForm {
-    padding: 2vw;
-  }
-  .sellingProductsStock {
-    margin: 2vw 0;
-  }
+  .sellingProductsForm { padding: 2vw; }
+  .sellingProductsGap { margin-top: 2vw; }
   .sellingProductsLabel {
     color: #9b9b9b;
     font-size: 0.88vw;
@@ -330,6 +326,64 @@
   }
   .myOrderShowObjekProfil {
     width: 30vw !important;
+  }
+  .sellingProductsCategoryBtn { font-size: 1vw; justify-content: space-between; width: 9vw; }
+  .sellingProductsCondition { margin-bottom: 3vw; }
+  /* SELLING PRODUCTS - SELECT COLOR & SIZE */
+  .filterOption {
+    margin-top: 1.5vw;
+  }
+  .filterColorOption {
+    height: 3vw;
+  }
+  .filterArrowLeft,
+  .filterArrowRight {
+    height: 1vw;
+    width: 0.5vw;
+  }
+  .filterArrowLeft {
+    margin-right: 0.5vw;
+  }
+  .filterArrowRight {
+    margin-left: 0.5vw;
+  }
+  /* COLOR */
+  .colorBtn,
+  .whiteColorBtn {
+    border-radius: 50%;
+    padding: 1vw;
+  }
+  .colorBtnBorder,
+  .colorBorderActive {
+    margin: 0 0.75vw;
+    border-radius: 50%;
+    padding: 0.22vw;
+  }
+  .colorBtnBorder {
+    border: 0.11vw solid white;
+  }
+  .colorBorderActive {
+    border: 0.11vw solid #273ac7;
+  }
+  .whiteColorBtn {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  /* SIZE */
+  .sizeBtn {
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    font-family: "Metropolis Regular";
+    margin: 0 0.88vw;
+    padding: 0.77vw;
+    width: 3.3vw;
+  }
+  .unselectSize {
+    background: white;
+    border: 0.1vw solid #9b9b9b;
+  }
+  .selectSize {
+    background: #273ac7;
+    color: white;
   }
 }
 
@@ -561,6 +615,9 @@
   .sellingProductsForm {
     padding: 5vw;
   }
+  .sellingProductsGap {
+    margin-top: 5vw;
+  }
   .sellingProductsStock {
     margin: 5vw 0;
   }
@@ -632,5 +689,66 @@
   }
   .myOrderShowObjekProfil {
     width: 50vw !important;
+  }
+  .sellingProductsCategoryBtn { font-size: 3.8vw; justify-content: space-between; margin: auto; width: 43vw; }
+  .sellingProductsCondition { margin-bottom: 10vw; }
+  /* SELLING PRODUCTS - SELECT COLOR & SIZE */
+  .filterOption {
+    justify-content: center;
+    margin-top: 3vw;
+  }
+  .filterColorOption {
+    height: 3vw;
+  }
+  .filterArrowLeft,
+  .filterArrowRight {
+    height: 5vw;
+    width: 2.5vw;
+  }
+  .filterArrowLeft {
+    margin-right: 2.5vw;
+  }
+  .filterArrowRight {
+    margin-left: 2.5vw;
+  }
+  /* COLOR */
+  .colorBtn,
+  .whiteColorBtn {
+    border-radius: 50%;
+    padding: 2.5vw;
+  }
+  .colorBtnBorder,
+  .colorBorderActive {
+    margin: 0 1.5vw;
+    border-radius: 50%;
+    padding: 0.5vw;
+  }
+  .colorBtnBorder {
+    border: 0.11vw solid white;
+    
+  }
+  .colorBorderActive {
+    border: 0.11vw solid #273ac7;
+    
+  }
+  .whiteColorBtn {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  /* SIZE */
+  .sizeBtn {
+    border-radius: 2.5vw;
+    font-size: 3vw;
+    font-family: "Metropolis Regular";
+    margin: 0 1vw;
+    padding: 2.5vw;
+    width: 10vw;
+  }
+  .unselectSize {
+    background: white;
+    border: 0.1vw solid #9b9b9b;
+  }
+  .selectSize {
+    background: #273ac7;
+    color: white;
   }
 }

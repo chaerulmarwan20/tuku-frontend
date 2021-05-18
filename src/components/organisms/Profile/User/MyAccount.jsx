@@ -160,9 +160,10 @@ export default function MyAccount({
               <div className={"displayRow " + css.myProfileLeftSideSetupSpace}>
                 <div className="displayRow">
                   <div
-                    className={"hoverThis " + css.myProfileRadioButton}
+                    className={"displayRow hoverThis " + css.myProfileRadioButton}
                     id="Laki-Laki"
                     onClick={switchGender}
+                    style={{alignItems: "center"}}
                   >
                     <div
                       className={css.myProfileInsideRadioButton}
@@ -178,7 +179,7 @@ export default function MyAccount({
                 </div>
                 <div className="displayRow">
                   <div
-                    className={"hoverThis " + css.myProfileRadioButton}
+                    className={"displayRow hoverThis " + css.myProfileRadioButton}
                     id="Perempuan"
                     onClick={switchGender}
                   >

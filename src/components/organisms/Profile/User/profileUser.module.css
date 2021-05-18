@@ -250,6 +250,7 @@
     background: white;
     border-radius: 50%;
     height: 0.8vw;
+    margin: 0.1vw;
     transition-duration: 0.3s;
     width: 0.8vw;
   }
@@ -546,14 +547,15 @@
   .myProfileRadioButton {
     border: 0.1vw solid black;
     border-radius: 50%;
-    padding: 0.5vw;
+    padding: 0.33vw;
   }
   .myProfileInsideRadioButton {
     background: white;
     border-radius: 50%;
-    height: 5vw;
+    height: 3vw;
+    margin: 0.33vw;
     transition-duration: 0.3s;
-    width: 5vw;
+    width: 3vw;
   }
   .myProfileGender {
     font-family: "Metropolis Regular";
