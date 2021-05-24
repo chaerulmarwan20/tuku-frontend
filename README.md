@@ -13,7 +13,7 @@
 - [Installation](#installation)
 - [Screenshots](#screenshots)
 - [Link](#link)
-- [Author](#author)
+- [Authors](#authors)
 
 ## Introduction
 
@@ -102,7 +102,7 @@ $ npm start
 - :white_check_mark: [`Backend Tuku`](https://github.com/chaerulmarwan20/tuku-backend)
 - :rocket: [`Production`](https://tukupedia.netlify.app/)
 
-## Author
+## Authors
 
 1. [Wisnu Prasetio](https://github.com/prasetioad) - Frontend- PM
 2. [Chaerul Marwan](https://github.com/chaerulmarwan20) - Full Stack - Member
