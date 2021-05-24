@@ -79,6 +79,7 @@ export default function HeadAddress({ funcAddress }) {
         .post(`${urlApi}/address`, values)
         .then((res) => {
           formik.resetForm();
+          setPrimary(false);
           Swal.fire({
             title: "Berhasil",
             text: "Alamat berhasil ditambahkan",
@@ -340,6 +341,7 @@ export default function HeadAddress({ funcAddress }) {
                             id="primary"
                             style={{ width: "20px" }}
                             onChange={() => handlePrimary()}
+                            checked={primary ? true : false}
                           />
                           <label
                             className="form-check-label"
@@ -365,8 +367,7 @@ export default function HeadAddress({ funcAddress }) {
                   <button
                     type="submit"
                     className="btn btn-save ml-3"
-                    data-dismiss="modal"
-                    onClick={formik.submitForm}
+                    onClick={formik.handleSubmit}
                   >
                     Save
                   </button>

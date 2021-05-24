@@ -116,7 +116,7 @@ export default function ShippingAddress({ func }) {
         Swal.fire({
           icon: "error",
           title: "Error!",
-          text: err.response.data.message,
+          text: "Alamat belum ditambahkan!",
           confirmButtonColor: "#273ac7",
         });
       });
