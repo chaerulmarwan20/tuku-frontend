@@ -104,7 +104,7 @@ $ npm start
 
 ## Authors
 
-1. [Wisnu Prasetio](https://github.com/prasetioad) - Frontend- PM
+1. [Wisnu Prasetio](https://github.com/prasetioad) - Frontend - PM
 2. [Chaerul Marwan](https://github.com/chaerulmarwan20) - Full Stack - Member
 3. [Herza Paramayudhanto](https://github.com/herzaparam) - Backend - Member
 4. [Erwin Saputra Sulistio](https://github.com/ErwinSaputraSulistio) - Frontend - Member
