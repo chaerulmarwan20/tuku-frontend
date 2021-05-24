@@ -12,19 +12,12 @@
 - [Endpoint](#endpoint)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
-- [Related Project](#related-project)
+- [Link](#link)
+- [Author](#author)
 
 ## Introduction
 
 Tuku is an online buying and selling web application that makes it easy to use to shop for various fashion products by offering many fashion categories such as shoes, shirts, trousers, shorts, and jackets. Users can also make online payments quickly, effectively and safely.
-
-This web application was developed by a team of 5 people.
-
-1. [Wisnu Prasetio](https://github.com/prasetioad) - Frontend- PM
-2. [Chaerul Marwan](https://github.com/chaerulmarwan20) - Full Stack - Member
-3. [Herza Paramayudhanto](https://github.com/herzaparam) - Backend - Member
-4. [Erwin Saputra Sulistio](https://github.com/ErwinSaputraSulistio) - Frontend - Member
-5. [Kevin Farid Alpharisy](https://github.com/kevinfaridap) - Frontend -Member
 
 ## Features
 
@@ -61,7 +54,7 @@ This web application was developed by a team of 5 people.
 
 ## Installation
 
-1. Open your terminal or command prompt. Then, clone the repo.
+1. Clone the repository.
 
 ```
 $ git clone https://github.com/chaerulmarwan20/tuku-frontend.git
@@ -71,16 +64,21 @@ $ git clone https://github.com/chaerulmarwan20/tuku-frontend.git
 
 ```
 $ cd tuku-frontend
+```
+
+3. Install package.
+
+```
 $ npm install
 ```
 
-3. Create environment variable.
+4. Create environment variable.
 
 ```
 $ cp .env.example .env
 ```
 
-4. Run this application.
+5. Run this application.
 
 ```
 $ npm start
@@ -99,7 +97,15 @@ $ npm start
   </span>
 </p>
 
-## Related Project
+## Link
 
 - :white_check_mark: [`Backend Tuku`](https://github.com/chaerulmarwan20/tuku-backend)
 - :rocket: [`Production`](https://tukupedia.netlify.app/)
+
+## Author
+
+1. [Wisnu Prasetio](https://github.com/prasetioad) - Frontend- PM
+2. [Chaerul Marwan](https://github.com/chaerulmarwan20) - Full Stack - Member
+3. [Herza Paramayudhanto](https://github.com/herzaparam) - Backend - Member
+4. [Erwin Saputra Sulistio](https://github.com/ErwinSaputraSulistio) - Frontend - Member
+5. [Kevin Farid Alpharisy](https://github.com/kevinfaridap) - Frontend - Member
