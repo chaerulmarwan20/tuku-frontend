@@ -25,17 +25,17 @@ function Index() {
         <Carousel breakPoints={breakPoints}>
           <div>
             <div className="homeCarouselOneText">
-              <p>Trends in 2020</p>
-            </div>
-            <div className="homeCarouselOneImg">
-              <img src="./asset/ian-dooley-10ca-K3e6Ko-unsplash 1.png" alt="" />
-            </div>
-          </div>
-          <div>
-            <div className="homeCarouselOneText">
               <p>Black Edition</p>
             </div>
             <div className="homeCarouselOneImg">
+              <img src="./asset/ian-dooley-10ca-K3e6Ko-unsplash 1.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div className="homeCarouselOneText">
+              <p>Trends in 2021</p>
+            </div>
+            <div className="homeCarouselOneImg">
               <img
                 src="./asset/benjamin-voros-TnNo84AJJ5A-unsplash 1.png"
                 alt=""
@@ -52,7 +52,7 @@ function Index() {
           </div>
           <div>
             <div className="homeCarouselOneText">
-              <p>Trends in 2020</p>
+              <p>Trends in 2021</p>
             </div>
             <div className="homeCarouselOneImg">
               <img
@@ -71,7 +71,7 @@ function Index() {
           </div>
           <div>
             <div className="homeCarouselOneText">
-              <p>Trends in 2020</p>
+              <p>Trends in 2021</p>
             </div>
             <div className="homeCarouselOneImg">
               <img
