@@ -235,7 +235,7 @@ export default function Reset() {
               </form>
               {!showPassword && (
                 <p className="mt-4">
-                  Don't have a Tokopedia account?{" "}
+                  Don't have a Tuku account?{" "}
                   <Link to="/register">Register</Link>
                 </p>
               )}

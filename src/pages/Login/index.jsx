@@ -160,8 +160,7 @@ export default function Login() {
                 </button>
               </form>
               <p className="mt-4">
-                Don't have a Tokopedia account?{" "}
-                <Link to="/register">Register</Link>
+                Don't have a Tuku account? <Link to="/register">Register</Link>
               </p>
             </div>
           </div>

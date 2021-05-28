@@ -262,7 +262,7 @@ export default function Register() {
                 </button>
               </form>
               <p className="mt-4">
-                Already have a Tokopedia account? <Link to="/login">Login</Link>
+                Already have a Tuku account? <Link to="/login">Login</Link>
               </p>
             </div>
           </div>
