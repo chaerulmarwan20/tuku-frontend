@@ -88,12 +88,12 @@ $ npm start
 
 <p align="center">
   <span>
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/74039235/117496299-0d242480-afa1-11eb-8714-d156080b080b.jpg">   
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/119991449-a6b88200-bff3-11eb-8d4a-a0702d589aa4.jpg">   
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/74039235/117561786-13f78800-b0c4-11eb-931a-320987705051.jpg">   
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/74039235/117561859-a26c0980-b0c4-11eb-9dec-0d85acdf6e6c.jpg">
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/74039235/117561916-01318300-b0c5-11eb-89cd-b806f3349940.jpg">   
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/74039235/119400733-c9514f00-bd04-11eb-8385-8a2b7c0bfb84.jpg">
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014636-7fba7a00-c00c-11eb-9cc4-5c2c2f398354.jpg">   
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014633-7f21e380-c00c-11eb-8d65-7847756b401a.jpg">   
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014631-7e894d00-c00c-11eb-913c-521ff2c8ebd1.jpg">   
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014628-7df0b680-c00c-11eb-9cbe-0bb9c90257a4.jpg">
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014625-7d582000-c00c-11eb-8288-1e5389ef3035.jpg">   
+    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014619-7b8e5c80-c00c-11eb-865a-af51124d69de.jpg">
   </span>
 </p>
 
