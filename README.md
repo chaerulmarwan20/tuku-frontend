@@ -91,7 +91,6 @@ $ npm start
     <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014636-7fba7a00-c00c-11eb-9cc4-5c2c2f398354.jpg">   
     <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014633-7f21e380-c00c-11eb-8d65-7847756b401a.jpg">   
     <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014631-7e894d00-c00c-11eb-913c-521ff2c8ebd1.jpg">   
-    <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014628-7df0b680-c00c-11eb-9cbe-0bb9c90257a4.jpg">
     <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014625-7d582000-c00c-11eb-8288-1e5389ef3035.jpg">   
     <img width="400" height="250" src="https://user-images.githubusercontent.com/76175402/120014619-7b8e5c80-c00c-11eb-865a-af51124d69de.jpg">
   </span>
