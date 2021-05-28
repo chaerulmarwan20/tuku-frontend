@@ -258,7 +258,7 @@ export default function Register() {
                   </small>
                 )}
                 <button type="submit" className="btn btn-submit btn-block mt-4">
-                  {!loading ? "Primary" : "Please wait..."}
+                  {!loading ? "Register" : "Please wait..."}
                 </button>
               </form>
               <p className="mt-4">

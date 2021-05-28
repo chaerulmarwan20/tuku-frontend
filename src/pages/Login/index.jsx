@@ -156,7 +156,7 @@ export default function Login() {
                   </Link>
                 </div>
                 <button type="submit" className="btn btn-submit btn-block mt-4">
-                  Primary
+                  Login
                 </button>
               </form>
               <p className="mt-4">

@@ -228,9 +228,9 @@ export default function Reset() {
                 <button type="submit" className="btn btn-submit btn-block mt-4">
                   {showPassword === false
                     ? !loading
-                      ? "Primary"
+                      ? "Send"
                       : "Please wait..."
-                    : "Primary"}
+                    : "Confirm"}
                 </button>
               </form>
               {!showPassword && (
