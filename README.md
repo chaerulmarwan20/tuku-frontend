@@ -49,7 +49,7 @@ Tuku is an online buying and selling web application that makes it easy to use t
 
 ## Prerequisites
 
-- [NodeJs](https://nodejs.org/en/download/)
+- [NodeJs](https://nodejs.org/)
 - [Backend Tuku](https://github.com/chaerulmarwan20/tuku-backend)
 
 ## Installation
